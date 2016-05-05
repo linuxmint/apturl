@@ -11,7 +11,7 @@ changelog = "debian/changelog"
 if os.path.exists(changelog):
     with open(changelog, encoding='utf-8') as fp:
         head = fp.readline()
-    match = re.compile(".*\(([0-9.]+)ubuntu.+\).*").match(head)
+    match = re.compile(".*\(([0-9.]+)\+linuxmint.+\).*").match(head)
     if match:
         version = match.group(1)
         with open("AptUrl/Version.py", "w") as fp:
