@@ -12,9 +12,6 @@ from AptUrl.UI import AbstractUI
 from AptUrl import Helpers
 from AptUrl.Helpers import _
 
-from .backend import get_backend
-
-
 APTURL_UI_FILE = os.environ.get(
     # Set this envar to use a test .ui file.
     'APTURL_UI_FILE',
@@ -35,11 +32,6 @@ class GtkUI(AbstractUI):
         self.dia.start_error = lambda: Gtk.main_quit()
         self.dia.exit = lambda: Gtk.main_quit()
         self.dia.realize()
-        self.backend = get_backend(self.dia)
-
-    def _action_done(self, backend, action, authorized, success, err_str, err_desc):
-        self.dia.set_sensitive(True)
-        Gtk.main_quit()
 
     # generic dialogs
     def _get_dialog(self, dialog_type, summary, msg="",
@@ -191,12 +183,12 @@ class GtkUI(AbstractUI):
 
     # progress etc
     def doUpdate(self):
-        self.backend.update()
+        #self.backend.update()
         self.dia.set_sensitive(False)
         Gtk.main()
 
     def doInstall(self, apturl):
-        self.backend.commit([apturl.package], [], False)
+        #self.backend.commit([apturl.package], [], False)
         self.dia.set_sensitive(False)
         Gtk.main()
 

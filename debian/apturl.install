@@ -1,4 +1,3 @@
 usr/bin/apturl-gtk
 usr/lib/python3/*-packages/AptUrl/gtk/*py*
-usr/lib/python3/*-packages/AptUrl/gtk/backend/
 usr/share/apturl/*-gtk.ui
