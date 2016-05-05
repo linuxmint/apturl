@@ -23,12 +23,10 @@
 import apt
 import apt_pkg
 
-import aptsources.distro
 from . import Parser
 from . import Helpers
 from .Helpers import _
 
-from aptsources.sourceslist import SourcesList
 from optparse import OptionParser
 
 import os
@@ -37,9 +35,6 @@ import os.path
 # adding new repositories is currently disabled because some people have
 # security concerns about this feature
 allow_new_repositories = False
-
-# channels that we know about
-channelsdir = "/usr/share/app-install/channels"
 
 # return codes
 (RESULT_OK,
@@ -51,57 +46,6 @@ class AptUrlController(object):
 
     def __init__(self, ui):
         self.ui = ui
-
-    def enableSection(self, apturl):
-        # parse sources.list
-        sourceslist = SourcesList()
-        distro = aptsources.distro.get_distro()
-        distro.get_sources(sourceslist)
-
-        # check if we actually need to enable anything
-        requested_components = []
-        for component in apturl.section:
-            if not component in distro.enabled_comps:
-                requested_components.append(component)
-        # if not, we are fine
-        if not requested_components:
-            return RESULT_OK
-        # otherwise ask the user if the really wants to anble them
-        if not self.ui.askEnableSections(apturl.section):
-            return RESULT_CANCELT
-        if not self.ui.doEnableSection(apturl.section):
-            self.ui.error(_("Enabling '%s' failed") %
-                          ", ".join(apturl.section))
-            return RESULT_ERROR
-        self.ui.doUpdate()
-        self.openCache()
-        return RESULT_OK
-
-    def enableChannel(self, apturl):
-        # ensure that no funny path tricks can be played
-        # by e.g. passing "apt:foo?channel=../../"
-        channel = os.path.basename(apturl.channel)
-
-        channelpath = "%s/%s.list" % (channelsdir,channel)
-        channelkey = "%s/%s.key" % (channelsdir,channel)
-        channelhtml = "%s/%s.eula" % (channelsdir,channel)
-
-        # check
-        if not os.path.exists(channelpath):
-            self.ui.error(_("Unknown channel '%s'") % channel,
-                          _("The channel '%s' is not known") % channel)
-            return RESULT_ERROR
-        channel_info_html = ""
-        if os.path.exists(channelhtml):
-            channel_info_html = open(channelhtml).read()
-        if not self.ui.askEnableChannel(apturl.channel, channel_info_html):
-            return RESULT_CANCELT
-        if not self.ui.doEnableChannel(channelpath, channelkey):
-            self.ui.error(_("Enabling channel '%s' failed") % apturl.channel)
-            return RESULT_ERROR
-        self.ui.doUpdate()
-        self.openCache()
-        return RESULT_OK
 
     def openCache(self):
         try:
@@ -184,13 +128,7 @@ class AptUrlController(object):
                               % apturl.schema)
                 continue
 
-            if apturl.section:
-                if self.enableSection(apturl) != RESULT_OK:
-                    continue
-            elif apturl.channel:
-                if self.enableChannel(apturl) != RESULT_OK:
-                    continue
-            elif apturl.refresh is not None:
+            if apturl.refresh is not None:
                 ui.doUpdate()
                 if not self.openCache():
                     return RESULT_ERROR

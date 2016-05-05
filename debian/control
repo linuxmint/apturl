@@ -6,7 +6,6 @@ Build-Depends: debhelper (>= 9),
  intltool,
  python3-dev,
  python3-distutils-extra,
- python3-update-manager,
  python3-aptdaemon
 X-Python3-Version: >= 3.2
 Standards-Version: 3.9.3
@@ -17,7 +16,6 @@ Depends: ${python3:Depends},
  ${shlibs:Depends},
  ${misc:Depends},
  python3-apt,
- python3-update-manager,
  mintupdate
 Description: install packages using the apt protocol - common data
  AptUrl is a simple graphical application that takes an URL (which follows the
@@ -34,13 +32,10 @@ Depends: ${python3:Depends},
  ${shlibs:Depends},
  ${misc:Depends},
  apturl-common (= ${binary:Version}),
- adwaita-icon-theme,
  python3-gi,
  python3-aptdaemon,
  python3-aptdaemon.gtk3widgets,
- gir1.2-gtk-3.0,
- gir1.2-webkit2-4.0
-Suggests: libgtk2-perl (>= 1:1.130)
+ gir1.2-gtk-3.0
 Description: install packages using the apt protocol - GTK+ frontend
  AptUrl is a simple graphical application that takes an URL (which follows the
  apt-protocol) as a command line option, parses it and carries out the
