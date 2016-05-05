@@ -37,7 +37,7 @@ class AbstractUI(object):
 
     # FIXME: the next two functions shoud go into generic code
     #        that checks for the availablility of tools
-    #        like gksu or kdesudo and uses them 
+    #        like gksu and uses them 
     #        appropriately
     def doEnableSection(self, sections):
         pass

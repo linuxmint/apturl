@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 17:39-0400\n"
+"POT-Creation-Date: 2016-05-05 14:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../apturl-gtk:51 ../apturl-kde:54
+#: ../apturl-gtk:49 ../apturl-kde:52
 msgid "User requested interrupt."
 msgstr ""
 
@@ -122,20 +122,20 @@ msgstr ""
 msgid "Enable additional components"
 msgstr ""
 
-#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:86 ../AptUrl/kde/KdeUI.py:82
+#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
 msgid "Enable additional software channel"
 msgstr ""
 
-#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:87 ../AptUrl/kde/KdeUI.py:83
+#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
 #, python-format
 msgid "Do you want to enable the following software channel: '%s'?"
 msgstr ""
 
-#: ../AptUrl/gtk/GtkUI.py:151 ../AptUrl/kde/KdeUI.py:133
+#: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
 msgid "Install additional software?"
 msgstr ""
 
-#: ../AptUrl/gtk/GtkUI.py:152 ../AptUrl/kde/KdeUI.py:134
+#: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
 #, python-format
 msgid "Do you want to install package '%s'?"
 msgstr ""
