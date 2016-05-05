@@ -1,73 +1,75 @@
+# Hungarian translation for apturl
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the apturl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: apt-url\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: apturl\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-16 12:06+0000\n"
-"PO-Revision-Date: 2011-08-20 14:31+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
-"Language-Team: Bruno Bord <bruno@jehaisleprintemps.net>\n"
+"PO-Revision-Date: 2011-08-04 23:11+0000\n"
+"Last-Translator: Gabor Kelemen <kelemeng@openscope.org>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
-"X-Poedit-Country: FRANCE\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../apturl-gtk:49 ../apturl-kde:52
 msgid "User requested interrupt."
-msgstr "Interruption à la demande de l'utilisateur."
+msgstr "Felhasználói megszakítás."
 
 #: ../AptUrl/Parser.py:85
 msgid "Non whitelist char in the uri"
-msgstr "Caractère interdit dans l'URI"
+msgstr "Nem megengedett karakter az uri-ben"
 
 #: ../AptUrl/Parser.py:93
 msgid "Whitespace in key=value"
-msgstr "Espace dans « clé=valeur »"
+msgstr "Üres hely a kulcs=érték kifejezésben"
 
 #: ../AptUrl/Parser.py:99
 #, python-format
 msgid "Exception '%s'"
-msgstr "Exception « %s »"
+msgstr "Kivétel '%s'"
 
 #: ../AptUrl/Parser.py:109
 #, python-format
 msgid "Url string '%s' too long"
-msgstr "La chaîne URL \"%s\" est trop longue"
+msgstr "A(z) „%s” URL-karaktelánc túl hosszú"
 
 #: ../AptUrl/Parser.py:115
 msgid "No ':' in the uri"
-msgstr "Pas de « : » dans l'URI"
+msgstr "Nincs ':' az uri-ben"
 
 #: ../AptUrl/AptUrl.py:73
 #, python-format
 msgid "Enabling '%s' failed"
-msgstr "L'activation de « %s » a échoué"
+msgstr "„%s” engedélyezése sikertelen"
 
 #: ../AptUrl/AptUrl.py:91
 #, python-format
 msgid "Unknown channel '%s'"
-msgstr "Source « %s »  inconnue"
+msgstr "Ismeretlen csatorna ('%s')"
 
 #: ../AptUrl/AptUrl.py:92
 #, python-format
 msgid "The channel '%s' is not known"
-msgstr "La source « %s »  est inconnue"
+msgstr "A '%s' csatorna ismeretlen"
 
 #: ../AptUrl/AptUrl.py:100
 #, python-format
 msgid "Enabling channel '%s' failed"
-msgstr "L'activation de la source « %s »  a échoué"
+msgstr "A csatorna ('%s') engedélyezése meghiúsult"
 
 #: ../AptUrl/AptUrl.py:112
 msgid "Invalid /etc/apt/sources.list file"
-msgstr "Fichier /etc/apt/sources.list invalide"
+msgstr "Helytelen az /etc/apt/sources.list fájl"
 
 #: ../AptUrl/AptUrl.py:115
 msgid "Software index is broken"
-msgstr "La liste des logiciels est corrompue"
+msgstr "A szoftverindex sérült"
 
 #: ../AptUrl/AptUrl.py:116
 msgid ""
@@ -76,115 +78,111 @@ msgid ""
 "the file '/etc/apt/sources.list' and reload the software information with: "
 "'sudo apt-get update' and 'sudo apt-get install -f'."
 msgstr ""
-"Il s'agit d'une erreur majeure de votre système de gestion de logiciels. "
-"Veuillez vérifier les paquets cassés avec le « Gestionnaire de paquets "
-"Synaptic », vérifier les droits d'accès et l'exactitude du fichier "
-"« /etc/apt/sources.list » puis recharger la liste des paquets disponibles ou "
-"installés en exécutant les commandes : « sudo apt-get update » et « sudo apt-"
-"get install -f »."
+"Ez a szoftverkezelő rendszer súlyos hibáját jelzi. Ellenőrizze a törött "
+"csomagokat a Synaptickal, ellenőrizze a fájl jogosultságait és az "
+"/etc/apt/sources.list fájl helyességét, majd töltse újra a "
+"szoftverinformációkat a „sudo apt-get update” és „sudo apt-get install -f” "
+"parancsok kiadásával."
 
 #: ../AptUrl/AptUrl.py:144
 msgid "Need a url to continue, exiting"
-msgstr "Une URL est nécessaire pour continuer ; fin d'exécution"
+msgstr "A folytatáshoz egy URL szükséges."
 
 #: ../AptUrl/AptUrl.py:147
 #, python-format
 msgid "Invalid url: '%s' given, exiting"
-msgstr "URL invalide : « %s » donnée ; fin d'exécution"
+msgstr "Érvénytelen URL: „%s”."
 
 #: ../AptUrl/AptUrl.py:183
 #, python-format
 msgid "Can not deal with protocol '%s' "
-msgstr "Impossible de gérer le protocole « %s » "
+msgstr "A(z) „%s” protokoll nem kezelhető "
 
 #: ../AptUrl/AptUrl.py:205
 #, python-format
 msgid "Package '%s' is virtual."
-msgstr "Le paquet « %s » est virtuel."
+msgstr "A csomag („%s”) virtuális"
 
 #: ../AptUrl/AptUrl.py:208
 #, python-format
 msgid "Could not find package '%s'."
-msgstr "Impossible de trouver le paquet « %s »."
+msgstr "A csomag („%s”) nem található."
 
 #: ../AptUrl/AptUrl.py:214
 #, python-format
 msgid "Package '%s' is already installed"
-msgstr "Le paquet « %s » est déjà installé"
+msgstr "A csomag (%s) már telepítve van"
 
 #: ../AptUrl/AptUrl.py:229
 #, python-format
 msgid "Can not install '%s' (%s) "
-msgstr "Impossible d'installer « %s » (%s) "
+msgstr "„%s” nem telepíthető (%s) "
 
 #: ../AptUrl/AptUrl.py:235
 #, python-format
 msgid ""
 "Package '%s' requests minimal version '%s', but only '%s' is available"
 msgstr ""
-"Le paquet « %s » demande au minimum la version « %s » et seule la version "
-"« %s » est disponible"
+"A csomag („%s”) a(z) „%s” minimális verziót igényli, de csak „%s” érhető el"
 
 #: ../AptUrl/UI.py:16
 msgid "Enable additional components"
-msgstr "Activer les composants additionnels"
+msgstr "További összetevők engedélyezése"
 
 #: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
 msgid "Enable additional software channel"
-msgstr "Activer les sources de logiciels additionnelles"
+msgstr "További szoftvercsatornák engedélyezése"
 
 #: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
 #, python-format
 msgid "Do you want to enable the following software channel: '%s'?"
-msgstr "Voulez-vous activer la source de logiciels suivante : « %s » ?"
+msgstr "Engedélyezni akarja a következő szoftvercsatornát: '%s'?"
 
 #: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
 msgid "Install additional software?"
-msgstr "Installer ce(s) programme(s) supplémentaire(s) ?"
+msgstr "Telepít további szoftvereket?"
 
 #: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
 #, python-format
 msgid "Do you want to install package '%s'?"
-msgstr "Voulez-vous installer le paquet « %s » ?"
+msgstr "Szeretné telepíteni a(z) „%s” csomagot?"
 
 #. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
 #: ../data/apturl-gtk.ui.h:1
 msgid "Description"
-msgstr "Description"
+msgstr "Leírás"
 
 #: ../data/apturl-gtk.ui.h:2
 msgid "_Install"
-msgstr "_Installer"
+msgstr "_Telepítés"
 
 #: ../data/apturl.schemas.in.h:1
 msgid "Whether the specified command should handle \"apt\" URLs"
-msgstr "Si la commande spécifiée doit gérer les URL « apt »"
+msgstr "A megadott kulcs kezelje-e az „apt” URL címeket"
 
 #: ../data/apturl.schemas.in.h:2
 msgid ""
 "True if the command specified in the \"command\" key should handle \"apt\" "
 "URLs."
 msgstr ""
-"Vrai si la commande spécifiée dans la clé « command » doit gérer les URL "
-"« apt »."
+"Igaz, ha a „command” kulcsban megadott parancs kezeli az „apt” URL címeket."
 
 #: ../data/apturl.schemas.in.h:3
 msgid "The handler for \"apt\" URLs"
-msgstr "L'application prenant en charge les URL « apt »"
+msgstr "Az „apt” URL címek kezelője"
 
 #: ../data/apturl.schemas.in.h:4
 msgid "The command used to handle \"apt\" URLs, if enabled."
-msgstr ""
-"La commande utilisée pour prendre en charge les URL « apt », si activé."
+msgstr "Az „apt” URL címek kezelésére használt parancs, ha engedélyezett."
 
 #: ../data/apturl.schemas.in.h:5
 msgid "Run the command in a terminal"
-msgstr "Exécuter la commande dans un terminal"
+msgstr "Parancs futtatása terminálban"
 
 #: ../data/apturl.schemas.in.h:6
 msgid ""
 "True if the command used to handle this type of URL should be run in a "
 "terminal."
 msgstr ""
-"Vrai si la commande utilisée pour gérer ce type d'URL doit être lancée dans "
-"un terminal."
+"Ha igazra van állítva, a „command” kulcsban beállított parancsnak "
+"terminálban kell futnia."

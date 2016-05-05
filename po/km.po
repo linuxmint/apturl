@@ -1,0 +1,191 @@
+# translation of po_apturl-km.po to Khmer
+# Khmer translation for apturl
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the apturl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: po_apturl-km\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-02-16 12:06+0000\n"
+"PO-Revision-Date: 2012-01-10 03:20+0000\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+
+#: ../apturl-gtk:49 ../apturl-kde:52
+msgid "User requested interrupt."
+msgstr "បាន​ផ្អាក​អ្វី​ដែល​បាន​ស្នើ​សុំ​របស់​អ្នក​ប្រើ​ ។"
+
+#: ../AptUrl/Parser.py:85
+msgid "Non whitelist char in the uri"
+msgstr "គ្មាន​តួអក្សរ​ whitelist នៅ​ក្នុង​ uri ទេ"
+
+#: ../AptUrl/Parser.py:93
+msgid "Whitespace in key=value"
+msgstr "ចន្លោះ​មើល​មិន​ឃើញ​នៅ​ក្នុង​ key=value"
+
+#: ../AptUrl/Parser.py:99
+#, python-format
+msgid "Exception '%s'"
+msgstr "ករណី​លើក​លែង​ '%s'"
+
+#: ../AptUrl/Parser.py:109
+#, python-format
+msgid "Url string '%s' too long"
+msgstr "Url '%s' វែង​ពេក"
+
+#: ../AptUrl/Parser.py:115
+msgid "No ':' in the uri"
+msgstr "គ្មាន​ ':' ក្នុង​ uri"
+
+#: ../AptUrl/AptUrl.py:73
+#, python-format
+msgid "Enabling '%s' failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បើក​ '%s'"
+
+#: ../AptUrl/AptUrl.py:91
+#, python-format
+msgid "Unknown channel '%s'"
+msgstr "មិន​ស្គាល់​ឆានែល​ '%s'"
+
+#: ../AptUrl/AptUrl.py:92
+#, python-format
+msgid "The channel '%s' is not known"
+msgstr "មិន​ស្គាល់​ឆានែល​ '%s'"
+
+#: ../AptUrl/AptUrl.py:100
+#, python-format
+msgid "Enabling channel '%s' failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​បើកឆានែល​ '%s'"
+
+#: ../AptUrl/AptUrl.py:112
+msgid "Invalid /etc/apt/sources.list file"
+msgstr "ឯកសារ​បញ្ជី​ /etc/apt/sources.list មិន​​ត្រឹម​ត្រូវ"
+
+#: ../AptUrl/AptUrl.py:115
+msgid "Software index is broken"
+msgstr "លិបិក្រម​កម្មវិធី​បាន​ខូច"
+
+#: ../AptUrl/AptUrl.py:116
+msgid ""
+"This is a major failure of your software management system. Please check for "
+"broken packages with synaptic, check the file permissions and correctness of "
+"the file '/etc/apt/sources.list' and reload the software information with: "
+"'sudo apt-get update' and 'sudo apt-get install -f'."
+msgstr ""
+"នេះ​ជា​ភាព​បរាជ័យ​យ៉ាង​ធ្ងន់​ធ្ងរ​សម្រាប់​ប្រព័ន្ធ​គ្រប់​គ្រង​កម្មវិធី​របស់​អ"
+"្នក​ ។ សូម​រក​មើល​កញ្ចប់​ដែល​ខូច​ដោយ​ប្រើ​ synaptic ពិនិត្យ​មើល​សិទ្ធិ​ឯកសារ "
+"និង​ភាព​ត្រឹម​ត្រូវ​របស់​ឯកសារ​ '/etc/apt/sources.list' "
+"រួច​ផ្ទុក​ព័ត៌មាន​កម្មវិធី​ឡើង​វិញ​ដោយ​ប្រើ​ ៖ 'sudo apt-get update' and "
+"'sudo apt-get install -f' ។"
+
+#: ../AptUrl/AptUrl.py:144
+msgid "Need a url to continue, exiting"
+msgstr "ត្រូវ​ការ​ url ដើម្បី​បន្ត ចេញ"
+
+#: ../AptUrl/AptUrl.py:147
+#, python-format
+msgid "Invalid url: '%s' given, exiting"
+msgstr "url មិន​ត្រឹម​ត្រូវ​ ៖ '%s' ត្រូវ​បាន​ផ្តល់ ចេញ"
+
+#: ../AptUrl/AptUrl.py:183
+#, python-format
+msgid "Can not deal with protocol '%s' "
+msgstr "មិន​អាច​ដោះ​ស្រាយ​ជា​មួយ​​​ពិធីការ​ '%s' "
+
+#: ../AptUrl/AptUrl.py:205
+#, python-format
+msgid "Package '%s' is virtual."
+msgstr "កញ្ចប់​ '%s' ជា​និម្មិត ។"
+
+#: ../AptUrl/AptUrl.py:208
+#, python-format
+msgid "Could not find package '%s'."
+msgstr "រក​មិន​ឃើញកញ្ចប់​​ '%s' ។"
+
+#: ../AptUrl/AptUrl.py:214
+#, python-format
+msgid "Package '%s' is already installed"
+msgstr "បាន​ដំឡើង​កញ្ចប់​ '%s'  រួច​ហើយ"
+
+#: ../AptUrl/AptUrl.py:229
+#, python-format
+msgid "Can not install '%s' (%s) "
+msgstr "មិន​អាច​ដំឡើង​ '%s' (%s) "
+
+#: ../AptUrl/AptUrl.py:235
+#, python-format
+msgid ""
+"Package '%s' requests minimal version '%s', but only '%s' is available"
+msgstr ""
+"កញ្ចប់​ '%s' ស្នើ​សុំ​កំណែ​អប្បបរមា​របស់​ '%s' ប៉ុន្តែ​មាន​តែ​ '%s' "
+"ដែល​អាច​ប្រើ​បាន"
+
+#: ../AptUrl/UI.py:16
+msgid "Enable additional components"
+msgstr "បើក​សមាស​ភាគ​បន្ថែមូ"
+
+#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
+msgid "Enable additional software channel"
+msgstr "បើក​ឆានែល​កម្មវិធី​បន្ថែម"
+
+#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
+#, python-format
+msgid "Do you want to enable the following software channel: '%s'?"
+msgstr "តើ​អ្នក​ចង់​បើក​ឆានែល​កម្មវិធី​ដូច​ខាង​ក្រោម​ឬ​ទេ​ ៖ '%s'?"
+
+#: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
+msgid "Install additional software?"
+msgstr "ដំឡើង​កម្មវិធី​បន្ថែម​ឬ​ ?"
+
+#: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
+#, python-format
+msgid "Do you want to install package '%s'?"
+msgstr "តើ​អ្នក​ចង់​ដំឡើង​កញ្ចប់​ '%s' ឬ ?"
+
+#. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
+#: ../data/apturl-gtk.ui.h:1
+msgid "Description"
+msgstr "សេចក្តី​ពិពណ៌នា"
+
+#: ../data/apturl-gtk.ui.h:2
+msgid "_Install"
+msgstr "ដំឡើង"
+
+#: ../data/apturl.schemas.in.h:1
+msgid "Whether the specified command should handle \"apt\" URLs"
+msgstr "ថា​តើ​ពាក្យ​បញ្ជា​ដែល​បាន​បញ្ជាក់​នឹង​គ្រប់​គ្រង​ URLs \"apt\" ឬ​អត់"
+
+#: ../data/apturl.schemas.in.h:2
+msgid ""
+"True if the command specified in the \"command\" key should handle \"apt\" "
+"URLs."
+msgstr ""
+"True បើ​សិន​ពាក្យ​បញ្ជា​ត្រូវ​បាន​បញ្ជាក់​នៅ​ក្នុង​គ្រាប់​ចុច​ \"command​\" "
+"នឹង​គ្រប់​គ្រង URLs \"apt\" ។"
+
+#: ../data/apturl.schemas.in.h:3
+msgid "The handler for \"apt\" URLs"
+msgstr "កម្មវិធី​គ្រប់​គ្រង​សម្រាប់​ URLs  \"apt\""
+
+#: ../data/apturl.schemas.in.h:4
+msgid "The command used to handle \"apt\" URLs, if enabled."
+msgstr "ពាក្យ​បញ្ជា​ដែល​ប្រើ​សម្រាប់​គ្រប់​គ្រង​ URLs \"apt\"  បើ​សិន​បើក​ ។"
+
+#: ../data/apturl.schemas.in.h:5
+msgid "Run the command in a terminal"
+msgstr "ដំណើរ​ការ​ពាក្យ​បញ្ជា​នៅ​ក្នុង​ស្ថានីយ"
+
+#: ../data/apturl.schemas.in.h:6
+msgid ""
+"True if the command used to handle this type of URL should be run in a "
+"terminal."
+msgstr ""
+"True បើ​សិន​ពាក្យ​បញ្ជា​ត្រូវ​បាន​ប្រើ​សម្រាប់​គ្រប់​គ្រង ​ប្រភេទ​ URL "
+"នេះ​នឹង​ត្រូវ​ដំណើរ​ការ​នៅ​ក្នុង​ស្ថានីយ ។"

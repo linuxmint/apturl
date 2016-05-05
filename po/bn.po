@@ -1,0 +1,188 @@
+# Bengali translation for apturl
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the apturl package.
+# Ummey Salma <snigdha@ankur.org.bd>, 2011.
+# Zenat Rahnuma <zenat@ankur.org.bd>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: apturl\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-02-16 12:06+0000\n"
+"PO-Revision-Date: 2011-10-06 06:51+0000\n"
+"Last-Translator: Mahay Alam Khan <mahayalamkhan@gmail.com>\n"
+"Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"X-Language: bn_BD\n"
+
+#: ../apturl-gtk:49 ../apturl-kde:52
+msgid "User requested interrupt."
+msgstr "ব্যবহারকারীর অনুরোধে বাধাপ্রাপ্ত।"
+
+#: ../AptUrl/Parser.py:85
+msgid "Non whitelist char in the uri"
+msgstr "uri এ কোনো হোয়াটলিস্ট অক্ষর নেই।"
+
+#: ../AptUrl/Parser.py:93
+msgid "Whitespace in key=value"
+msgstr "key=value এ হোয়াইটস্পেস"
+
+#: ../AptUrl/Parser.py:99
+#, python-format
+msgid "Exception '%s'"
+msgstr "ব্যতিক্রম '%s'"
+
+#: ../AptUrl/Parser.py:109
+#, python-format
+msgid "Url string '%s' too long"
+msgstr "ইউআরএল স্ট্রিং '%s' টি অতিরিক্ত লম্বা"
+
+#: ../AptUrl/Parser.py:115
+msgid "No ':' in the uri"
+msgstr "uri এ কোনো ':' নেই"
+
+#: ../AptUrl/AptUrl.py:73
+#, python-format
+msgid "Enabling '%s' failed"
+msgstr "'%s' সক্রিয় করতে ব্যর্থ"
+
+#: ../AptUrl/AptUrl.py:91
+#, python-format
+msgid "Unknown channel '%s'"
+msgstr "'%s' অজানা চ্যানেল"
+
+#: ../AptUrl/AptUrl.py:92
+#, python-format
+msgid "The channel '%s' is not known"
+msgstr "'%s' চ্যানেলটি পরিচিতি নয়"
+
+#: ../AptUrl/AptUrl.py:100
+#, python-format
+msgid "Enabling channel '%s' failed"
+msgstr "চ্যানেল '%s' সক্রিয় করতে ব্যর্থ"
+
+#: ../AptUrl/AptUrl.py:112
+msgid "Invalid /etc/apt/sources.list file"
+msgstr "ত্রুটিপূর্ণ /etc/apt/sources.list ফাইল"
+
+#: ../AptUrl/AptUrl.py:115
+msgid "Software index is broken"
+msgstr "সফ্টওয়্যার ইন্ডেক্সটি নস্ট"
+
+#: ../AptUrl/AptUrl.py:116
+msgid ""
+"This is a major failure of your software management system. Please check for "
+"broken packages with synaptic, check the file permissions and correctness of "
+"the file '/etc/apt/sources.list' and reload the software information with: "
+"'sudo apt-get update' and 'sudo apt-get install -f'."
+msgstr ""
+"এটা আপনার সফ্টওয়ার ম্যানেজমেন্ট সিস্টেমের বিশাল ব্যর্থতা। অনুগ্রহ করে "
+"সিন্যাপটিকের ব্রোকেন প্যাকেজ পরীক্ষা, ফাইল '/etc/apt/sources.list' এর "
+"অনুমোদন এবং নির্ভুলতা পরীক্ষা এবং যার সাহায্যে সফ্টওয়ার তথ্য রিলোড করা হবে: "
+"'sudo apt-get update' and 'sudo apt-get install -f'।"
+
+#: ../AptUrl/AptUrl.py:144
+msgid "Need a url to continue, exiting"
+msgstr "চালিয়ে যাওয়ার জন্য একটি url দরকার, প্রস্থান করা হচ্ছে"
+
+#: ../AptUrl/AptUrl.py:147
+#, python-format
+msgid "Invalid url: '%s' given, exiting"
+msgstr "ত্রুটিপূর্ণ url: '%s' দেয়া আছে, প্রস্থান করা হচ্ছে"
+
+#: ../AptUrl/AptUrl.py:183
+#, python-format
+msgid "Can not deal with protocol '%s' "
+msgstr "প্রটোকল '%s' এর সাথে সুবিধা হচ্ছে না "
+
+#: ../AptUrl/AptUrl.py:205
+#, python-format
+msgid "Package '%s' is virtual."
+msgstr "প্যাকেজ '%s'  ভার্চুয়াল।"
+
+#: ../AptUrl/AptUrl.py:208
+#, python-format
+msgid "Could not find package '%s'."
+msgstr "প্যাকেজ '%s' পাওয়া যায়নি।"
+
+#: ../AptUrl/AptUrl.py:214
+#, python-format
+msgid "Package '%s' is already installed"
+msgstr "প্যাকেজ '%s'  ইতোমধ্যে ইনস্টলকৃত"
+
+#: ../AptUrl/AptUrl.py:229
+#, python-format
+msgid "Can not install '%s' (%s) "
+msgstr "ইনস্টল করা যায়নি '%s' (%s) "
+
+#: ../AptUrl/AptUrl.py:235
+#, python-format
+msgid ""
+"Package '%s' requests minimal version '%s', but only '%s' is available"
+msgstr ""
+"প্যাকেজ '%s' ন্যূনতম সংস্করণ '%s' এর জন্য অনুরোধ করে, কিন্তু কেবল '%s' পাওয়া "
+"যায়"
+
+#: ../AptUrl/UI.py:16
+msgid "Enable additional components"
+msgstr "অতিরিক্ত কম্পোনেন্ট সক্রিয়"
+
+#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
+msgid "Enable additional software channel"
+msgstr "অতিরিক্ত সফ্টওয়ার চ্যানেল সক্রিয়"
+
+#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
+#, python-format
+msgid "Do you want to enable the following software channel: '%s'?"
+msgstr "নিম্নোক্ত সফ্টওয়ার চ্যানেল সক্রিয় করতে চান: '%s'?"
+
+#: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
+msgid "Install additional software?"
+msgstr "অতিরিক্ত সফ্টওয়ার ইনস্টল করা হবে?"
+
+#: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
+#, python-format
+msgid "Do you want to install package '%s'?"
+msgstr "'%s' প্যাকেজ ইনস্টল করতে চান?"
+
+#. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
+#: ../data/apturl-gtk.ui.h:1
+msgid "Description"
+msgstr "বর্ণনা"
+
+#: ../data/apturl-gtk.ui.h:2
+msgid "_Install"
+msgstr "ইনস্টল (_I)"
+
+#: ../data/apturl.schemas.in.h:1
+msgid "Whether the specified command should handle \"apt\" URLs"
+msgstr "নির্দিষ্ট কমান্ড \"apt\" URLs হ্যান্ডেল করা উচিত কিনা"
+
+#: ../data/apturl.schemas.in.h:2
+msgid ""
+"True if the command specified in the \"command\" key should handle \"apt\" "
+"URLs."
+msgstr ""
+"ট্রু হবে যদি \"কমান্ড\" কী এ নির্দিষ্ট করা কমান্ড \"apt\" URLs হ্যান্ডেল করা "
+"উচিত তবে।"
+
+#: ../data/apturl.schemas.in.h:3
+msgid "The handler for \"apt\" URLs"
+msgstr "\"apt\" URLs এর জন্য হ্যান্ডলার"
+
+#: ../data/apturl.schemas.in.h:4
+msgid "The command used to handle \"apt\" URLs, if enabled."
+msgstr "\"apt\" URLs এর জন্য ব্যবহৃত কমান্ড, যদি সক্রিয় থাকে।"
+
+#: ../data/apturl.schemas.in.h:5
+msgid "Run the command in a terminal"
+msgstr "কমান্ডটি টার্মিনালে চালাও"
+
+#: ../data/apturl.schemas.in.h:6
+msgid ""
+"True if the command used to handle this type of URL should be run in a "
+"terminal."
+msgstr "এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান সত্য।"

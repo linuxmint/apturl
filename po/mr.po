@@ -1,0 +1,189 @@
+# Marathi translation for apturl
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the apturl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: apturl\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-02-16 12:06+0000\n"
+"PO-Revision-Date: 2013-04-08 10:24+0000\n"
+"Last-Translator: Chetan Khona <chetan@sumconcepts.com>\n"
+"Language-Team: Marathi <mr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+
+#: ../apturl-gtk:49 ../apturl-kde:52
+msgid "User requested interrupt."
+msgstr "वापरकर्त्याने हस्तक्षेपाची विनंती केली"
+
+#: ../AptUrl/Parser.py:85
+msgid "Non whitelist char in the uri"
+msgstr "uri मध्ये पांढऱ्या यादीत नसलेले अक्षर आहे"
+
+#: ../AptUrl/Parser.py:93
+msgid "Whitespace in key=value"
+msgstr "किल्लीतील मोकळी जागा = मूल्य"
+
+#: ../AptUrl/Parser.py:99
+#, python-format
+msgid "Exception '%s'"
+msgstr "अपवाद '%s'"
+
+#: ../AptUrl/Parser.py:109
+#, python-format
+msgid "Url string '%s' too long"
+msgstr "'%s' हि Url स्ट्रींग खूप मोठी आहे"
+
+#: ../AptUrl/Parser.py:115
+msgid "No ':' in the uri"
+msgstr "uri मध्ये ':' हे नाही"
+
+#: ../AptUrl/AptUrl.py:73
+#, python-format
+msgid "Enabling '%s' failed"
+msgstr "'%s' कार्यान्वित करण्यास अपयश"
+
+#: ../AptUrl/AptUrl.py:91
+#, python-format
+msgid "Unknown channel '%s'"
+msgstr "'%s' हे अपरिचीत माध्यम आहे"
+
+#: ../AptUrl/AptUrl.py:92
+#, python-format
+msgid "The channel '%s' is not known"
+msgstr "'%s' हे माध्यम माहित नाही"
+
+#: ../AptUrl/AptUrl.py:100
+#, python-format
+msgid "Enabling channel '%s' failed"
+msgstr "'%s' हे माध्यम कार्यान्वित करण्यास अपयश"
+
+#: ../AptUrl/AptUrl.py:112
+msgid "Invalid /etc/apt/sources.list file"
+msgstr "अवैध /etc/apt/sources.list फाईल"
+
+#: ../AptUrl/AptUrl.py:115
+msgid "Software index is broken"
+msgstr "सॉफ्टवेअर अनुक्रमणिका तुटलेली आहे"
+
+#: ../AptUrl/AptUrl.py:116
+msgid ""
+"This is a major failure of your software management system. Please check for "
+"broken packages with synaptic, check the file permissions and correctness of "
+"the file '/etc/apt/sources.list' and reload the software information with: "
+"'sudo apt-get update' and 'sudo apt-get install -f'."
+msgstr ""
+"तुमच्या साँफ्टवेअर व्यवस्थापन प्रणालीत मोठी समस्या आहे. कृपया सिनेप्टिक ने "
+"तुटलेली पेकेजेस तपासा, फाईल परवानगी तपासा व '/etc/apt/sources.list' या "
+"फाईलची अचूकता तपासा व  साँफ्टवेअर माहिती 'sudo apt-get update' and 'sudo apt-"
+"get install -f' या आदेशाने पुन्हा दाखल करा."
+
+#: ../AptUrl/AptUrl.py:144
+msgid "Need a url to continue, exiting"
+msgstr "पुढे जाण्याकरिता url ची गरज आहे, बाहेर पडत आहे"
+
+#: ../AptUrl/AptUrl.py:147
+#, python-format
+msgid "Invalid url: '%s' given, exiting"
+msgstr "अवैध url: '%s' दिली, बाहेर पडत आहे"
+
+#: ../AptUrl/AptUrl.py:183
+#, python-format
+msgid "Can not deal with protocol '%s' "
+msgstr "'%s' या शिष्टाचारा बरोबर काम करता येत नाही "
+
+#: ../AptUrl/AptUrl.py:205
+#, python-format
+msgid "Package '%s' is virtual."
+msgstr "'%s' हे आभासी पॅकेज आहे."
+
+#: ../AptUrl/AptUrl.py:208
+#, python-format
+msgid "Could not find package '%s'."
+msgstr "'%s' हे पॅकेज सापडले नाही."
+
+#: ../AptUrl/AptUrl.py:214
+#, python-format
+msgid "Package '%s' is already installed"
+msgstr "'%s' हे पॅकेज अगोदरच प्रतिष्ठापीत आहे"
+
+#: ../AptUrl/AptUrl.py:229
+#, python-format
+msgid "Can not install '%s' (%s) "
+msgstr "'%s' (%s) प्रतिष्ठापीत करता येत नाही "
+
+#: ../AptUrl/AptUrl.py:235
+#, python-format
+msgid ""
+"Package '%s' requests minimal version '%s', but only '%s' is available"
+msgstr ""
+"'%s' हे पॅकेज किमान आवृत्ती '%s' ची विनंती करत आहे, पण फक्त '%s' हे उपलब्ध "
+"आहे"
+
+#: ../AptUrl/UI.py:16
+msgid "Enable additional components"
+msgstr "अधिक घटक कार्यान्वित करा"
+
+#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
+msgid "Enable additional software channel"
+msgstr "अतिरिक्त साँफ्टवेअर मार्ग कार्यान्वित करा"
+
+#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
+#, python-format
+msgid "Do you want to enable the following software channel: '%s'?"
+msgstr "तुम्हाला पुढील साँफ्टवेअर मार्ग कार्यान्वित करायचे आहेत का : '%s'?"
+
+#: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
+msgid "Install additional software?"
+msgstr "अतिरिक्त साँफ्टवेअर प्रतिष्ठापीत करायचे का?"
+
+#: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
+#, python-format
+msgid "Do you want to install package '%s'?"
+msgstr "'%s' हे पॅकेज प्रतिष्ठापीत करायचे आहे का?"
+
+#. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
+#: ../data/apturl-gtk.ui.h:1
+msgid "Description"
+msgstr "वर्णन"
+
+#: ../data/apturl-gtk.ui.h:2
+msgid "_Install"
+msgstr "प्रतिष्ठापीत करा (_I)"
+
+#: ../data/apturl.schemas.in.h:1
+msgid "Whether the specified command should handle \"apt\" URLs"
+msgstr "निर्देशित आदेशाने \"apt\" URLs हाताळायचे का"
+
+#: ../data/apturl.schemas.in.h:2
+msgid ""
+"True if the command specified in the \"command\" key should handle \"apt\" "
+"URLs."
+msgstr ""
+"\"आदेश\" कळ मधील निर्देशित आदेशाने \"apt\" URLs हाताळायचे असल्यास बरोबर."
+
+#: ../data/apturl.schemas.in.h:3
+msgid "The handler for \"apt\" URLs"
+msgstr "\"apt\" URLs ची हाताळणी करणारा"
+
+#: ../data/apturl.schemas.in.h:4
+msgid "The command used to handle \"apt\" URLs, if enabled."
+msgstr ""
+"जर कार्यान्वित केलेले असेल तर \"apt\" URLs ची हाताळणी करण्याकरिता वापरण्याचा "
+"आदेश"
+
+#: ../data/apturl.schemas.in.h:5
+msgid "Run the command in a terminal"
+msgstr "आदेश टर्मिनल मध्ये चालवा"
+
+#: ../data/apturl.schemas.in.h:6
+msgid ""
+"True if the command used to handle this type of URL should be run in a "
+"terminal."
+msgstr ""
+"या प्रकारचे URL हाताळण्या करीता टर्मिनल वर आदेश आढळत असल्यास खरे आहे."

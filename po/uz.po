@@ -1,73 +1,75 @@
+# Uzbek translation for apturl
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the apturl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: apt-url\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: apturl\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-16 12:06+0000\n"
-"PO-Revision-Date: 2011-08-20 14:31+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
-"Language-Team: Bruno Bord <bruno@jehaisleprintemps.net>\n"
+"PO-Revision-Date: 2012-12-20 15:51+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Uzbek <uz@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
-"X-Poedit-Country: FRANCE\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../apturl-gtk:49 ../apturl-kde:52
 msgid "User requested interrupt."
-msgstr "Interruption à la demande de l'utilisateur."
+msgstr "Фойдаланувчи томонидан тўхтатилди"
 
 #: ../AptUrl/Parser.py:85
 msgid "Non whitelist char in the uri"
-msgstr "Caractère interdit dans l'URI"
+msgstr "Uri'да рухсат этилмаган ишора мавжуд"
 
 #: ../AptUrl/Parser.py:93
 msgid "Whitespace in key=value"
-msgstr "Espace dans « clé=valeur »"
+msgstr "Калит=қиймат тузилишида бўш жой қолдирилган"
 
 #: ../AptUrl/Parser.py:99
 #, python-format
 msgid "Exception '%s'"
-msgstr "Exception « %s »"
+msgstr "Истисно '%s'"
 
 #: ../AptUrl/Parser.py:109
 #, python-format
 msgid "Url string '%s' too long"
-msgstr "La chaîne URL \"%s\" est trop longue"
+msgstr "'%s' url сатри жуда узун"
 
 #: ../AptUrl/Parser.py:115
 msgid "No ':' in the uri"
-msgstr "Pas de « : » dans l'URI"
+msgstr "Uri'да ':' йўқ"
 
 #: ../AptUrl/AptUrl.py:73
 #, python-format
 msgid "Enabling '%s' failed"
-msgstr "L'activation de « %s » a échoué"
+msgstr "'%s' фаоллаштириш муваффақиятсиз тугади"
 
 #: ../AptUrl/AptUrl.py:91
 #, python-format
 msgid "Unknown channel '%s'"
-msgstr "Source « %s »  inconnue"
+msgstr "Номаълум йўл '%s'"
 
 #: ../AptUrl/AptUrl.py:92
 #, python-format
 msgid "The channel '%s' is not known"
-msgstr "La source « %s »  est inconnue"
+msgstr "'%s' йўли маълум эмас"
 
 #: ../AptUrl/AptUrl.py:100
 #, python-format
 msgid "Enabling channel '%s' failed"
-msgstr "L'activation de la source « %s »  a échoué"
+msgstr "'%s' йўлини фаоллаштириш муваффақиятсиз тугади"
 
 #: ../AptUrl/AptUrl.py:112
 msgid "Invalid /etc/apt/sources.list file"
-msgstr "Fichier /etc/apt/sources.list invalide"
+msgstr "/etc/apt/sources.list файли ҳақиқий эмас"
 
 #: ../AptUrl/AptUrl.py:115
 msgid "Software index is broken"
-msgstr "La liste des logiciels est corrompue"
+msgstr "Дастурлар индекси бузилган"
 
 #: ../AptUrl/AptUrl.py:116
 msgid ""
@@ -76,115 +78,108 @@ msgid ""
 "the file '/etc/apt/sources.list' and reload the software information with: "
 "'sudo apt-get update' and 'sudo apt-get install -f'."
 msgstr ""
-"Il s'agit d'une erreur majeure de votre système de gestion de logiciels. "
-"Veuillez vérifier les paquets cassés avec le « Gestionnaire de paquets "
-"Synaptic », vérifier les droits d'accès et l'exactitude du fichier "
-"« /etc/apt/sources.list » puis recharger la liste des paquets disponibles ou "
-"installés en exécutant les commandes : « sudo apt-get update » et « sudo apt-"
-"get install -f »."
+"Дастурларни бошқариш тизимида жиддий хато рўй берди. Бузилган пакетларни "
+"synaptic ёрдамида текширинг, '/etc/apt/sources.list' файлининг рухсатларини "
+"ва тўғрилигини 'sudo apt-get update' ва 'sudo apt-get install -f' ёрдамида "
+"текширинг."
 
 #: ../AptUrl/AptUrl.py:144
 msgid "Need a url to continue, exiting"
-msgstr "Une URL est nécessaire pour continuer ; fin d'exécution"
+msgstr "Давом эттириш учун url зарур, тўхтатилди"
 
 #: ../AptUrl/AptUrl.py:147
 #, python-format
 msgid "Invalid url: '%s' given, exiting"
-msgstr "URL invalide : « %s » donnée ; fin d'exécution"
+msgstr "Кўрсатилган url: '%s' ҳақиқий эмас, тўхтатилди"
 
 #: ../AptUrl/AptUrl.py:183
 #, python-format
 msgid "Can not deal with protocol '%s' "
-msgstr "Impossible de gérer le protocole « %s » "
+msgstr "'%s' протоколини қўллаб бўлмади "
 
 #: ../AptUrl/AptUrl.py:205
 #, python-format
 msgid "Package '%s' is virtual."
-msgstr "Le paquet « %s » est virtuel."
+msgstr "'%s' бу виртуал пакет."
 
 #: ../AptUrl/AptUrl.py:208
 #, python-format
 msgid "Could not find package '%s'."
-msgstr "Impossible de trouver le paquet « %s »."
+msgstr "'%s' пакетини топиб бўлмади."
 
 #: ../AptUrl/AptUrl.py:214
 #, python-format
 msgid "Package '%s' is already installed"
-msgstr "Le paquet « %s » est déjà installé"
+msgstr "'%s' пакети ўрнатилган"
 
 #: ../AptUrl/AptUrl.py:229
 #, python-format
 msgid "Can not install '%s' (%s) "
-msgstr "Impossible d'installer « %s » (%s) "
+msgstr "'%s' (%s) ўрнатиб бўлмади "
 
 #: ../AptUrl/AptUrl.py:235
 #, python-format
 msgid ""
 "Package '%s' requests minimal version '%s', but only '%s' is available"
-msgstr ""
-"Le paquet « %s » demande au minimum la version « %s » et seule la version "
-"« %s » est disponible"
+msgstr "'%s' пакети '%s' минимал версиясини сўради, аммо фақат '%s' мавжуд"
 
 #: ../AptUrl/UI.py:16
 msgid "Enable additional components"
-msgstr "Activer les composants additionnels"
+msgstr "Қўшимча компонентларни фаоллаштириш"
 
 #: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
 msgid "Enable additional software channel"
-msgstr "Activer les sources de logiciels additionnelles"
+msgstr "Қўшимча дастурлар манбаини фаоллаштириш"
 
 #: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
 #, python-format
 msgid "Do you want to enable the following software channel: '%s'?"
-msgstr "Voulez-vous activer la source de logiciels suivante : « %s » ?"
+msgstr "Сиз ушбу қўшимча дастурлар манбаини фаоллаштиришни истайсизми: '%s'?"
 
 #: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
 msgid "Install additional software?"
-msgstr "Installer ce(s) programme(s) supplémentaire(s) ?"
+msgstr "Қўшимча дастурлар ўрнатилсинми?"
 
 #: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
 #, python-format
 msgid "Do you want to install package '%s'?"
-msgstr "Voulez-vous installer le paquet « %s » ?"
+msgstr "'%s' пакетини ўрнатишни истайсизми?"
 
 #. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
 #: ../data/apturl-gtk.ui.h:1
 msgid "Description"
-msgstr "Description"
+msgstr "Таърифи"
 
 #: ../data/apturl-gtk.ui.h:2
 msgid "_Install"
-msgstr "_Installer"
+msgstr "Ў_рнатиш"
 
 #: ../data/apturl.schemas.in.h:1
 msgid "Whether the specified command should handle \"apt\" URLs"
-msgstr "Si la commande spécifiée doit gérer les URL « apt »"
+msgstr "Белгиланган буйруқ \"apt\" URL'ларини қўлласинми?"
 
 #: ../data/apturl.schemas.in.h:2
 msgid ""
 "True if the command specified in the \"command\" key should handle \"apt\" "
 "URLs."
 msgstr ""
-"Vrai si la commande spécifiée dans la clé « command » doit gérer les URL "
-"« apt »."
+"Тўғри агар \"command\" калитида белгиланган буйруқ \"apt\" URL'ларини қўлласа"
 
 #: ../data/apturl.schemas.in.h:3
 msgid "The handler for \"apt\" URLs"
-msgstr "L'application prenant en charge les URL « apt »"
+msgstr "\"apt\" URL'лари бошқарувчиси"
 
 #: ../data/apturl.schemas.in.h:4
 msgid "The command used to handle \"apt\" URLs, if enabled."
-msgstr ""
-"La commande utilisée pour prendre en charge les URL « apt », si activé."
+msgstr "\"apt\" URL'ларини қўллаш учун буйруқ, фаоллаштирилган бўлса."
 
 #: ../data/apturl.schemas.in.h:5
 msgid "Run the command in a terminal"
-msgstr "Exécuter la commande dans un terminal"
+msgstr "Буйруқни терминалда бажариш"
 
 #: ../data/apturl.schemas.in.h:6
 msgid ""
 "True if the command used to handle this type of URL should be run in a "
 "terminal."
 msgstr ""
-"Vrai si la commande utilisée pour gérer ce type d'URL doit être lancée dans "
-"un terminal."
+"Тўғри агар ушбу турдаги URL'ларни қўллаш учун буйруқ терминалда бажарилса"

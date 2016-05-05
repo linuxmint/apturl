@@ -1,72 +1,75 @@
-#, fuzzy
+# Thai translation for apturl
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the apturl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: apturl\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-16 12:06+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2011-09-23 03:25+0000\n"
+"Last-Translator: Manop Pornpeanvichanon(มานพ พรเพียรวิชานนท์) <Unknown>\n"
+"Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
-"Language: \n"
 
 #: ../apturl-gtk:49 ../apturl-kde:52
 msgid "User requested interrupt."
-msgstr ""
+msgstr "ผู้ใช้ขอขัดจังหวะ"
 
 #: ../AptUrl/Parser.py:85
 msgid "Non whitelist char in the uri"
-msgstr ""
+msgstr "ไม่มีตัวอักษรสีขาวใน uri"
 
 #: ../AptUrl/Parser.py:93
 msgid "Whitespace in key=value"
-msgstr ""
+msgstr "ที่ว่างสีขาวใน key=value"
 
 #: ../AptUrl/Parser.py:99
 #, python-format
 msgid "Exception '%s'"
-msgstr ""
+msgstr "ยกเว้น '%s'"
 
 #: ../AptUrl/Parser.py:109
 #, python-format
 msgid "Url string '%s' too long"
-msgstr ""
+msgstr "ข้อความ URL '%s' ยาวไป"
 
 #: ../AptUrl/Parser.py:115
 msgid "No ':' in the uri"
-msgstr ""
+msgstr "ห้ามใส่ ':' ใน uri"
 
 #: ../AptUrl/AptUrl.py:73
 #, python-format
 msgid "Enabling '%s' failed"
-msgstr ""
+msgstr "ไม่สามารถเปิดใช้ '%s'"
 
 #: ../AptUrl/AptUrl.py:91
 #, python-format
 msgid "Unknown channel '%s'"
-msgstr ""
+msgstr "ไม่รู้จักช่องทาง '%s'"
 
 #: ../AptUrl/AptUrl.py:92
 #, python-format
 msgid "The channel '%s' is not known"
-msgstr ""
+msgstr "ช่องทาง '%s' ไม่รู้จัก"
 
 #: ../AptUrl/AptUrl.py:100
 #, python-format
 msgid "Enabling channel '%s' failed"
-msgstr ""
+msgstr "การเปิดใช้ช่องทาง '%s' ล้มเหลว"
 
 #: ../AptUrl/AptUrl.py:112
 msgid "Invalid /etc/apt/sources.list file"
-msgstr ""
+msgstr "แฟ้ม /etc/apt/sources.list ไม่ถูกต้อง"
 
 #: ../AptUrl/AptUrl.py:115
 msgid "Software index is broken"
-msgstr ""
+msgstr "ดัชนีของซอฟต์แวร์เสียหาย"
 
 #: ../AptUrl/AptUrl.py:116
 msgid ""
@@ -75,77 +78,82 @@ msgid ""
 "the file '/etc/apt/sources.list' and reload the software information with: "
 "'sudo apt-get update' and 'sudo apt-get install -f'."
 msgstr ""
+"นี่เป็นความล้มเหลวครั้งใหญ่ของระบบจัดการซอฟต์แวร์ของคุณ กรุณาตรวจสอบ broken "
+"packages ด้วย synaptic, "
+"ตรวจดูสิทธิ์การใช้งานไฟล์และความถูกต้องของไฟล์นั้นที่ '/etc/apt/souces.list' "
+"และรีโหลดข้อมูลซอฟต์แวร์ด้วย:'sudo apt-get update' และ 'sudo apt-get install "
+"-f'"
 
 #: ../AptUrl/AptUrl.py:144
 msgid "Need a url to continue, exiting"
-msgstr ""
+msgstr "ต้องการ url เพื่อดำเนินการต่อ, ยังไม่มี"
 
 #: ../AptUrl/AptUrl.py:147
 #, python-format
 msgid "Invalid url: '%s' given, exiting"
-msgstr ""
+msgstr "url ไม่ถูกต้อง: ให้ค่า '%s', ยังไม่มี"
 
 #: ../AptUrl/AptUrl.py:183
 #, python-format
 msgid "Can not deal with protocol '%s' "
-msgstr ""
+msgstr "ไม่สามารถจัดการโปรโตคอล '%s' "
 
 #: ../AptUrl/AptUrl.py:205
 #, python-format
 msgid "Package '%s' is virtual."
-msgstr ""
+msgstr "'%s' เป็นแพกเกจเสมือน"
 
 #: ../AptUrl/AptUrl.py:208
 #, python-format
 msgid "Could not find package '%s'."
-msgstr ""
+msgstr "ไม่สามารถหาแพกเกจ '%s'"
 
 #: ../AptUrl/AptUrl.py:214
 #, python-format
 msgid "Package '%s' is already installed"
-msgstr ""
+msgstr "แพคเกจ '%s' ติดตั้งอยู่แล้ว"
 
 #: ../AptUrl/AptUrl.py:229
 #, python-format
 msgid "Can not install '%s' (%s) "
-msgstr ""
+msgstr "ไม่สามารถติดตั้ง '%s' (%s) "
 
 #: ../AptUrl/AptUrl.py:235
 #, python-format
 msgid ""
 "Package '%s' requests minimal version '%s', but only '%s' is available"
-msgstr ""
+msgstr "แพคเกจ '%s' ต้องการรุ่นขั้นต่ำ '%s' แต่มีเฉพาะรุ่น '%s' ที่มี"
 
 #: ../AptUrl/UI.py:16
 msgid "Enable additional components"
-msgstr ""
+msgstr "เปิดใช้งานส่วนประกอบเพิ่มเติม"
 
 #: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
 msgid "Enable additional software channel"
-msgstr ""
+msgstr "เปิดใช้งานช่องทางโปรแกรมเพิ่มเติม"
 
 #: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
 #, python-format
 msgid "Do you want to enable the following software channel: '%s'?"
-msgstr ""
+msgstr "คุณต้องการเปิดใช้งานช่องทางซอฟต์แวร์: '%s' หรือไม่?"
 
 #: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
 msgid "Install additional software?"
-msgstr ""
+msgstr "ติดตั้งซอฟท์แวร์เพิ่มเติม?"
 
 #: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
 #, python-format
 msgid "Do you want to install package '%s'?"
-msgstr ""
+msgstr "คุณต้องการติดตั้งแพกเกจ '%s' หรือไม่?"
 
 #. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
 #: ../data/apturl-gtk.ui.h:1
 msgid "Description"
-msgstr ""
+msgstr "คำอธิบาย"
 
 #: ../data/apturl-gtk.ui.h:2
 msgid "_Install"
-msgstr ""
+msgstr "_ติดตั้ง"
 
 #: ../data/apturl.schemas.in.h:1
 msgid "Whether the specified command should handle \"apt\" URLs"
@@ -167,10 +175,10 @@ msgstr ""
 
 #: ../data/apturl.schemas.in.h:5
 msgid "Run the command in a terminal"
-msgstr ""
+msgstr "เรียกใช้คำสั่งในเทอร์มินัล"
 
 #: ../data/apturl.schemas.in.h:6
 msgid ""
 "True if the command used to handle this type of URL should be run in a "
 "terminal."
-msgstr ""
+msgstr "ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล"
