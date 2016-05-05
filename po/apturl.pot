@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-05 15:07+0100\n"
+"POT-Creation-Date: 2016-05-05 16:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,20 +122,20 @@ msgstr ""
 msgid "Enable additional components"
 msgstr ""
 
-#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:87
+#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:89
 msgid "Enable additional software channel"
 msgstr ""
 
-#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:88
+#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:90
 #, python-format
 msgid "Do you want to enable the following software channel: '%s'?"
 msgstr ""
 
-#: ../AptUrl/gtk/GtkUI.py:149
+#: ../AptUrl/gtk/GtkUI.py:151
 msgid "Install additional software?"
 msgstr ""
 
-#: ../AptUrl/gtk/GtkUI.py:150
+#: ../AptUrl/gtk/GtkUI.py:152
 #, python-format
 msgid "Do you want to install package '%s'?"
 msgstr ""

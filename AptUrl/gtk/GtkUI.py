@@ -9,6 +9,7 @@ import os
 import sys
 import apt_pkg
 import subprocess
+import tempfile
 
 from AptUrl.UI import AbstractUI
 from AptUrl import Helpers
@@ -34,6 +35,7 @@ class GtkUI(AbstractUI):
         self.dia.start_error = lambda: Gtk.main_quit()
         self.dia.exit = lambda: Gtk.main_quit()
         self.dia.realize()
+        self.require_update = False
 
     # generic dialogs
     def _get_dialog(self, dialog_type, summary, msg="",
@@ -148,7 +150,6 @@ class GtkUI(AbstractUI):
         dia_xml = self.dia_xml
         header = _("Install additional software?")
         body = _("Do you want to install package '%s'?") % package
-        dia.set_keep_above(True)
         dia.set_title('')
         header_label = dia_xml.get_object('header_label')
         header_label.set_markup("<b><big>%s</big></b>" % header)
@@ -179,20 +180,45 @@ class GtkUI(AbstractUI):
             dia.hide()
             return False
 
-        # don't set on-top while installing
-        dia.set_keep_above(False)
         return True
 
     # progress etc
     def doUpdate(self):
-        #self.backend.update()
-        self.dia.set_sensitive(False)
-        Gtk.main()
+        self.require_update = True
+        win = self.dia.get_window()
+        try:
+            xid = win.get_xid()
+        except Exception as e:
+            print(e)
+            xid = 0
+        FNULL = open(os.devnull, 'w')
+        cmd = ["sudo", "/usr/lib/linuxmint/mintUpdate/checkAPT.py", "--use-synaptic", "%d" % xid]
+        comnd = subprocess.Popen(' '.join(cmd), stdout=FNULL, stderr=subprocess.STDOUT, shell=True)
+        returnCode = comnd.wait()
 
     def doInstall(self, apturl):
-        #self.backend.commit([apturl.package], [], False)
-        self.dia.set_sensitive(False)
-        Gtk.main()
+        self.dia.hide()
+        win = self.dia.get_window()
+        try:
+            xid = win.get_xid()
+        except Exception as e:
+            print(e)
+            xid = 0
+
+        cmd = ["pkexec", "/usr/sbin/synaptic", "--hide-main-window",  "--non-interactive", "--parent-window-id", "%s" % xid]
+        cmd.append("-o")
+        cmd.append("Synaptic::closeZvt=true")
+        f = tempfile.NamedTemporaryFile()
+        for pkg in [apturl.package]:
+            pkg_line = "%s\tinstall\n" % pkg
+            f.write(pkg_line.encode("utf-8"))
+        cmd.append("--set-selections-file")
+        cmd.append("%s" % f.name)
+        f.flush()
+        comnd = subprocess.Popen(' '.join(cmd), shell=True)
+        returnCode = comnd.wait()
+        f.close()
+        self.dia.exit()
 
 if __name__ == "__main__":
     ui = GtkUI()
