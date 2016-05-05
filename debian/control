@@ -1,0 +1,74 @@
+Source: apturl
+Section: admin
+Priority: optional
+Maintainer: Michael Vogt <mvo@ubuntu.com>
+Build-Depends: debhelper (>= 9),
+ intltool,
+ python3-dev,
+ python3-distutils-extra,
+ python3-update-manager,
+ python3-aptdaemon
+X-Python3-Version: >= 3.2
+Standards-Version: 3.9.3
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/apturl/ubuntu/
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-core-dev/apturl/ubuntu/files
+
+Package: apturl-common
+Architecture: any
+Depends: ${python3:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends},
+ python3-apt,
+ python3-update-manager
+Replaces: apturl (<< 0.3.6ubuntu2)
+Description: install packages using the apt protocol - common data
+ AptUrl is a simple graphical application that takes an URL (which follows the
+ apt-protocol) as a command line option, parses it and carries out the
+ operations that the URL describes (that is, it asks the user if he wants the
+ indicated packages to be installed and if the answer is positive does so for
+ him).
+ .
+ This package contains the common data shared between the frontends.
+
+Package: apturl
+Architecture: any
+Depends: ${python3:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends},
+ apturl-common (= ${binary:Version}),
+ adwaita-icon-theme,
+ python3-gi,
+ software-properties-gtk,
+ python3-aptdaemon,
+ python3-aptdaemon.gtk3widgets,
+ gir1.2-gtk-3.0,
+ gir1.2-webkit2-4.0
+Suggests: libgtk2-perl (>= 1:1.130)
+Description: install packages using the apt protocol - GTK+ frontend
+ AptUrl is a simple graphical application that takes an URL (which follows the
+ apt-protocol) as a command line option, parses it and carries out the
+ operations that the URL describes (that is, it asks the user if he wants the
+ indicated packages to be installed and if the answer is positive does so for
+ him).
+ .
+ This package contains the GTK+ frontend.
+
+Package: apturl-kde
+Architecture: any
+Depends: ${python3:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends},
+ python3-pyqt4,
+ python3-pykde4,
+ apturl-common (= ${binary:Version}),
+ kdesudo,
+ qapt-batch,
+ software-properties-kde (>= 0.75.2)
+Description: install packages using the apt protocol - KDE frontend
+ AptUrl is a simple graphical application that takes an URL (which follows the
+ apt-protocol) as a command line option, parses it and carries out the
+ operations that the URL describes (that is, it asks the user if he wants the
+ indicated packages to be installed and if the answer is positive does so for
+ him).
+ .
+ This package contains the KDE frontend.

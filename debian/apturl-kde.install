@@ -1,0 +1,3 @@
+usr/bin/apturl-kde
+usr/lib/python3/*-packages/AptUrl/kde/*py*
+usr/share/apturl/*-qt.ui

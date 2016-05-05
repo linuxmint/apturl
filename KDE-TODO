@@ -1,0 +1,3 @@
+* either reimplement QLabel as QSummaryLabel to abstract setText for adding <h2> tags
+  + or replace the whole compound with ktitle widget, which completely implements what our ui does ... looks weird though
+  + or pass strings for the header label through a function that attaches the tags

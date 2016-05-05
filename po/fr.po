@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: apt-url\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-11 11:41+0100\n"
+"PO-Revision-Date: 2007-12-04 09:46+0100\n"
+"Last-Translator: Bruno Bord <bbord@interfaceip.fr>\n"
+"Language-Team: Bruno Bord <bruno@jehaisleprintemps.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../apturl:199
+msgid "Need a url to continue, exiting"
+msgstr ""
+
+#: ../apturl:202
+#, c-format
+msgid "Invalid url: '%s' given, exiting"
+msgstr ""
+
+#: ../apturl:208
+#, c-format
+msgid "Can not deal with protocol '%s' "
+msgstr ""
+
+#: ../apturl:212
+#, c-format
+msgid "Can not find '%s' "
+msgstr ""
+
+#: ../apturl:215
+#, c-format
+msgid "Package '%s' is already installed"
+msgstr ""
+
+#: ../apturl:219
+msgid "Install additional software?"
+msgstr "Installer ce(s) programme(s) supplémentaire(s) ?"
+
+#: ../apturl:220
+#, fuzzy, c-format
+msgid "Do you want to install the package '%s' ?"
+msgstr "Voulez-vous installer le paquetage '%s' ?"
+
+#: ../apturl:245
+#, c-format
+msgid "Enabling '%s' failed"
+msgstr ""
+
+#: ../apturl:258
+#, c-format
+msgid "Can not install '%s' (%s) "
+msgstr ""
+
+#: ../apturl:263
+#, c-format
+msgid "Package '%s' requests minimal version '%s', but only '%s' is available"
+msgstr ""
+
+#: ../apturl:273
+msgid "Remove software channel?"
+msgstr ""
+
+#: ../apturl:274
+#, c-format
+msgid ""
+"For installing '%s' the software channel '%s' was added, do you want to "
+"remove it again?"
+msgstr ""
+
+#: ../data/apturl.schemas.in.h:1
+msgid "Run the command in a terminal"
+msgstr ""
+
+#: ../data/apturl.schemas.in.h:2
+msgid "The command used to handle \"apt\" URLs, if enabled."
+msgstr ""
+
+#: ../data/apturl.schemas.in.h:3
+msgid "The handler for \"apt\" URLs"
+msgstr ""
+
+#: ../data/apturl.schemas.in.h:4
+msgid ""
+"True if the command specified in the \"command\" key should handle \"apt\" "
+"URLs."
+msgstr ""
+
+#: ../data/apturl.schemas.in.h:5
+msgid ""
+"True if the command used to handle this type of URL should be run in a "
+"terminal."
+msgstr ""
+
+#: ../data/apturl.schemas.in.h:6
+msgid "Whether the specified command should handle \"apt\" URLs"
+msgstr ""

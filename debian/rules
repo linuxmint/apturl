@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with python3
+
+override_dh_auto_build:
+	python3 setup.py build
+
+override_dh_auto_install:
+	python3 ./setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb
+
+override_dh_auto_test:
+	python3 -m unittest discover -vv
+
+override_dh_auto_clean:
+	rm -f AptUrl/Version.py
+	python3 setup.py clean -a
+	rm -rf build
+	rm -rf *.egg-info
+	find . -name __pycache__ | xargs rm -rf
+
+
+PKG=apturl
+DEBVER=$(shell dpkg-parsechangelog |sed -n -e '/^Version:/s/^Version: //p')
+DEB_BUILD_PROG:=debuild --preserve-envvar PATH --preserve-envvar CCACHE_DIR -us -uc $(DEB_BUILD_PROG_OPTS)
+
+arch-build:
+	rm -rf debian/arch-build
+	mkdir -p debian/arch-build/$(PKG)-$(DEBVER)
+	tar -c --exclude=arch-build --no-recursion -f - `bzr inventory` | (cd debian/arch-build/$(PKG)-$(DEBVER);tar xf -)
+	(cd debian/arch-build/$(PKG)-$(DEBVER) && $(DEB_BUILD_PROG))

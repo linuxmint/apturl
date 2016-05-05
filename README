@@ -1,0 +1,17 @@
+
+Some examples of valid urls:
+
+Simple install instructions:
+apt:3ddesktop
+
+Some additonal constrains:
+apt:2vcard?minver=1.0
+apt:owl,newbiedoc,python-pykaraoke?dist=gutsy
+apt:python-pykaraoke?dist=gutsy,owl,newbiedoc
+apt:cdda2wav?section=multiverse
+apt:java?section=multiverse?section=universe
+apt:adobe-flashplugin?channel=partner
+
+Some basic substutions are also supported:
+apt:adobe-flashplugin?channel=$distro-partner
+apt:linux-restricted-modules-$kernel'

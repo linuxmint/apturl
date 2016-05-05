@@ -1,0 +1,11 @@
+[encoding: UTF-8]
+apturl-gtk
+apturl-kde
+AptUrl/Parser.py
+AptUrl/AptUrl.py
+AptUrl/UI.py
+AptUrl/gtk/GtkUI.py
+AptUrl/kde/KdeUI.py
+[type: gettext/glade] data/apturl-gtk.ui
+data/apturl.schemas.in
+

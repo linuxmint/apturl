@@ -1,0 +1,74 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+#
+# Copyright © 2009 Harald Sitter <apachelogger@ubuntu.com>
+#
+# AUTHOR:
+# Harald Sitter <apachelogger@ubuntu.com>
+#
+# This file is part of AptUrl
+#
+# AptUrl is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as published
+# by the Free Software Foundation; either version 2 of the License, or (at
+# your option) any later version.
+#
+# AptUrl is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with AptUrl; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+# ignore apt's "API not stable yet" warning
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning, append=1)
+
+import sys
+import gettext
+from gettext import gettext as _
+
+from AptUrl.AptUrl import AptUrlController, RESULT_CANCELT
+from AptUrl.kde.KdeUI import KdeUI
+
+from PyKDE4.kdeui import KApplication
+from PyKDE4.kdecore import  *
+
+class AptUrlApplication(KApplication):
+    def exec_(self):
+        localesApp="apturl"
+        localesDir="/usr/share/locale"
+        gettext.bindtextdomain(localesApp, localesDir)
+        gettext.textdomain(localesApp)
+
+        ui = KdeUI()
+        apturl = AptUrlController(ui)
+
+        try:
+            apturl.main()
+        except KeyboardInterrupt:
+            print(_("User requested interrupt."))
+            return RESULT_CANCELT
+
+if __name__ == "__main__":
+    appName     = "apturl"
+    catalog     = ""
+    programName = ki18n (b"AptUrl")
+    version     = "1.0"
+    description = ki18n (b"AptUrl for Kubuntu")
+    license     = KAboutData.License_GPL
+    copyright   = ki18n ("© Harald Sitter".encode('utf-8'))
+    text        = ki18n (b"none")
+    homePage    = "http://www.kubuntu.org/"
+    bugEmail    = ""
+
+    about = KAboutData (appName, catalog, programName, version, description,
+                        license, copyright, text, homePage, bugEmail)
+    about.addAuthor(ki18n(b"Harald Sitter"), KLocalizedString(),
+        "apachelogger@ubuntu.com")
+    KCmdLineArgs.init([""],about)
+
+    app = AptUrlApplication()
+    app.exec_()

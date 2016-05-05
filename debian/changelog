@@ -1,0 +1,594 @@
+apturl (0.5.2ubuntu11) xenial; urgency=medium
+
+  * Drop webkit1 support, we're switching to pure webkit2 now
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Wed, 13 Jan 2016 11:48:22 +0000
+
+apturl (0.5.2ubuntu10) xenial; urgency=medium
+
+  * debian/apturl.install:
+    - don't install the gconf schemas, it's probably useful to no one
+      nowadays (would only work for applications using the GNOME2 libgnome)
+      and creates a depends on gconf which we want to drop from the iso
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 16 Dec 2015 11:23:10 +0100
+
+apturl (0.5.2ubuntu9) wily; urgency=medium
+
+  * data/apturl-gtk.ui: set the dimension on the scrolledwindow rather
+    than the textview so the description is showing with a non zero height 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 15 Oct 2015 17:56:46 +0100
+
+apturl (0.5.2ubuntu8) wily; urgency=medium
+
+  * Use webkit2 in addition to webkit1. (LP: #1469221)
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Tue, 30 Jun 2015 12:59:59 +0100
+
+apturl (0.5.2ubuntu7) wily; urgency=medium
+
+  * Don't include Debian version in the python module version (LP: #1465549)
+
+ -- Zygmunt Krynicki <zygmunt.krynicki@canonical.com>  Fri, 26 Jun 2015 11:01:58 +0200
+
+apturl (0.5.2ubuntu6) vivid; urgency=medium
+
+  [ Tim Lunn ]
+  * Don't use legacy icon names, these are no longer available in
+    adwaita-icon-theme. (LP: #1437150) 
+
+  [ Iain Lane ]
+  * For dialog-question, go back to using the stock icon name as Humanity
+    doesn't yet have an icon with the new name.
+
+ -- Tim Lunn <tim@feathertop.org>  Thu, 02 Apr 2015 13:53:05 +0100
+
+apturl (0.5.2ubuntu5) vivid; urgency=medium
+
+  * Switch gnome-icon-theme to adwaita-icon-theme, which is its
+    successor. (LP: #1414613)
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Mon, 26 Jan 2015 14:55:39 +0000
+
+apturl (0.5.2ubuntu4) trusty; urgency=medium
+
+  * Drop libgtk2-perl Recommends to Suggests.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Sun, 16 Mar 2014 02:56:58 +0000
+
+apturl (0.5.2ubuntu3) trusty; urgency=low
+
+  * AptUrl/AptUrl.py: don't use decode on a str (lp: #1050826)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 11 Dec 2013 11:18:25 +0100
+
+apturl (0.5.2ubuntu2) saucy; urgency=low
+
+  * adjust backend to reuse the bits from update-manager (LP: #1200775)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 08 Oct 2013 20:14:22 +0200
+
+apturl (0.5.2ubuntu1) raring; urgency=low
+
+  * AptUrl/gtk/backend/__init__.py: Drop "action-done" signal definition;
+    update-manager's GTK backend already defines it with different arguments,
+    so this is ineffective and confusing.
+  * AptUrl/gtk/GtkUI.py, _on_backend_done(): Add additional error signal
+    arguments, as defined by update-manager's backend.
+  * AptUrl/gtk/backend/InstallBackend{Aptdaemon,Synaptic}.py: Call action-done
+    signal with error arguments. (LP: #1103024)
+  * data/apturl-gtk.ui: Drop obsolete "has_separator" property. Fixes a
+    warning.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 09 Apr 2013 13:23:37 +0200
+
+apturl (0.5.1ubuntu6) quantal; urgency=low
+
+  * AptUrl/gtk/backend/InstallBackendAptdaemon.py: Work around
+    incompatible Update Manager API change (as described in Launchpad
+    bug #1026257).  LP: #1020980
+
+ -- Barry Warsaw <barry@ubuntu.com>  Wed, 18 Jul 2012 13:38:02 -0400
+
+apturl (0.5.1ubuntu5) quantal; urgency=low
+
+  * debian/control: Move python3-aptdaemon dependency to apturl binary
+    package (from apturl-common) since only the gtk backend needs it.
+
+ -- Barry Warsaw <barry@ubuntu.com>  Fri, 15 Jun 2012 09:49:13 -0400
+
+apturl (0.5.1ubuntu4) quantal; urgency=low
+
+  [ Brian Murray ]
+  * Port to Python 3:
+    - Use Python 3 style print functions
+  * AptUrl/Parser.py:
+    - ensure MAX_URL_LEN/10 returns an int
+
+  [ Colin Watson ]
+  * AptUrl/gtk/backend/InstallBackendSynaptic.py:
+    - Keep a reference to the data tuple passed to GObject.child_watch_add
+      to avoid attempts to destroy it without a thread context.
+    - Open temporary synaptic selections file in text mode.
+
+  [ Barry Warsaw ]
+  * Additional Python 3 fixes:
+    + Port setup.py to Python 3.
+    + Use the new python-apt API since the legacy API is not available in
+      Python 3.
+    + ki18n() takes bytes.
+    + Fix relative imports so the code can be run from source.
+    + Fixed some additional packaging paths.
+    + Change #! lines to use python3.
+    + Changed debian/control and debian/rules to use python3.
+    + Change debian/compat == 9
+    + apturl now must require python3-aptdaemon.gtk3widgets (i.e. not |
+      synaptic) due to the Python 3 port of update-manager.
+  * Other changes:
+    + Remove the need for threads in the KDE front-end.
+    + Enable running the test suite via `python3 -m unittest discover`
+    + i18n updates.
+    + Various and sundry pyflakes, whitespace, style, line length, and
+      spelling fixes.
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 11 Jun 2012 10:32:52 -0700
+
+apturl (0.5.1ubuntu3) precise; urgency=low
+
+  * Take the unicode representation of the parser error message instead
+    of the string representation, so that we get clean i18n handling.
+    LP: #911144.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sat, 24 Mar 2012 02:36:28 -0700
+
+apturl (0.5.1ubuntu2) precise; urgency=low
+
+  * debian/control: Fix dependencies: python-gobject → python-gi.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 13 Mar 2012 19:45:46 +0100
+
+apturl (0.5.1ubuntu1) oneiric-proposed; urgency=low
+
+  * add support for multiarch package names (LP: #872146)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 13 Oct 2011 08:59:04 +0200
+
+apturl (0.5ubuntu1) oneiric; urgency=low
+
+  * port to gtk3, update dependencies
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 25 Jul 2011 18:39:00 +0200
+
+apturl (0.4.3ubuntu1) oneiric; urgency=low
+
+  * improve exception handling and shorten overly long strings
+  * add aptdaemon backend
+  * add dependencies to python-aptdaemon-gtk
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 22 Jul 2011 14:06:42 +0200
+
+apturl (0.4.2ubuntu5) natty; urgency=low
+
+  * debian/apturl-common.install:
+    - fix install file by removing no longer relevant 
+      usr/share/omf (this fixes a FTBFS)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 30 Mar 2011 15:40:41 +0200
+
+apturl (0.4.2ubuntu4) natty; urgency=low
+
+  * data/apturl.desktop:
+    - Add a desktop file to register mime type.  LP: #698181
+
+ -- Michael Terry <mterry@ubuntu.com>  Thu, 06 Jan 2011 11:48:26 -0500
+
+apturl (0.4.2ubuntu3) natty; urgency=low
+
+  * Don't hardcode python2.6 in the packaging.
+  * Build using dh_python2 instead of dh_pycentral.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 17 Dec 2010 15:35:28 +0100
+
+apturl (0.4.2ubuntu2) natty; urgency=low
+
+  [ Harald Sitter ]
+  * Make apturl-kde explicity depend on python-qt4 and python-kde4
+
+  [ Colin Watson ]
+  * Make apturl recommend libgtk2-perl (>= 1:1.130) rather than
+    libgnome2-perl, matching debconf 1.5.36ubuntu3.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 17 Dec 2010 13:54:53 +0000
+
+apturl (0.4.2ubuntu1) natty; urgency=low
+
+  * Switch from glade to GtkBuilder (LP: #403533)
+
+ -- Michael Terry <mterry@ubuntu.com>  Tue, 05 Oct 2010 11:06:24 -0400
+
+apturl (0.4.1ubuntu7) maverick; urgency=low
+
+  * Fix KDE protocol files to enlist in the local protocol class
+    + This makes KRunner in KDE SC 4.5 pick up apt:foo as call to apturl again
+  * Bump standards version to 3.9.1
+  * Switch to dpkg-source 3
+  * Switch all packages to arch:any rather than all
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Tue, 07 Sep 2010 17:04:52 +0200
+
+apturl (0.4.1ubuntu6) maverick; urgency=low
+
+  * Port apturl-kde to qapt-batch (LP: #497803)
+  * Replace the dependency on install-package with one on qapt-batch
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Fri, 06 Aug 2010 23:02:03 -0400
+
+apturl (0.4.1ubuntu5) maverick; urgency=low
+
+  * Fix LP: #576944 - Move the Firefox preferences to /etc/firefox
+    - update setup.py
+    - add debian/apturl-common.postinst
+    - add debian/apturl-common.preinst
+  * Don't install apturl.js in /usr/share/firerox - Firefox doesn't see this
+    - update debian/apturl-common.install
+    - update setup.py
+  * Add a couple of extra preferences for Firefox
+    - update data/apturl.js
+
+ -- Chris Coulson <chris.coulson@canonical.com>  Tue, 27 Jul 2010 13:46:22 +0100
+
+apturl (0.4.1ubuntu4) lucid; urgency=low
+
+  * Drop python-gtkhtml2 recommends (moved to webkit).
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Mon, 15 Mar 2010 10:37:10 +0100
+
+apturl (0.4.1ubuntu3) lucid; urgency=low
+
+  * apturl.8:
+    - add example for the "channel" parameter
+  * AptUrl/gtk/GtkUI.py:
+    - use webkit instead of gtkhtml (ucid-duplicated-packages spec)
+  * debian/control:
+    - add python-webkit depend on debian/control
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 08 Mar 2010 17:12:10 +0100
+
+apturl (0.4.1ubuntu2) karmic; urgency=low
+
+  * Reupload merged 0.4.0ubuntu5 and 0.4.1ubuntu1, forgot to bzr push -.-
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Fri, 18 Sep 2009 22:53:24 +0200
+
+apturl (0.4.1ubuntu1) karmic; urgency=low
+
+  [ Harald Sitter ]
+  * Borrow encoding wrappers from GDebi to fix encodings in KDE UI
+
+  [ Michael Vogt ]
+  * AptUrl/gtk/GtkUI.py:
+    - Use software-properites to enable componenents
+  * debian/control:
+    - Remove dependency on gnome-app-install
+    - Add software-properties-gtk
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 18 Sep 2009 09:46:29 +0200
+
+apturl (0.4.0ubuntu5) karmic; urgency=low
+
+  * Borrow encoding wrappers from GDebi to fix encodings in KDE UI (implemented
+    via Helpers). These new wrappers utf8, _ and _n are used throughout the
+    whole application.
+  * Fix minor formatting error in KDE UI's _get_dialog
+  * link apturl's manpage to the apturl-gtk and apturl-kde manpages since
+    they share the same argument parser anyway
+  * Bump standards version to 3.8.3
+  * Port package build system to dh 7
+    + Build-depend on debhelper 7
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Thu, 10 Sep 2009 13:09:27 +0200
+
+apturl (0.4.0ubuntu4) karmic; urgency=low
+
+  * build without "DH_PYCENTRAL=include-links" for now, 
+    to work around breakage when upgrading from the previous
+    version that was build without the include-links option
+    (LP: #422825)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 02 Sep 2009 17:44:54 +0200
+
+apturl (0.4.0ubuntu3) karmic; urgency=low
+
+  * Make KDE frontend use a Qt UI file (should make it easier to maintain)
+  * Enable KDE frontend to few HTML when about to enable a software channel
+  * Clean-up setup.py
+  * Make apturl script fall back to KDE frontend when -gtk is not installed even
+    if KDE_FULL_SESSION is not set
+  * Resolve self-relations of apturl binary package
+  * fix crash on ctrl-c (in KDE frontend)
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Tue, 01 Sep 2009 21:02:20 +0200
+
+apturl (0.4.0ubuntu2) karmic; urgency=low
+
+  * fix FTBFS 
+  * fix crash on ctrl-c
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 01 Sep 2009 19:34:09 +0200
+
+apturl (0.4.0ubuntu1) karmic; urgency=low
+
+  [ Harald Sitter ]
+  * Add KDE frontend (LP: #293533)
+
+  [ Michael Vogt ]
+  * build with DH_PYCENTRAL=include-links
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Sat, 22 Aug 2009 18:41:35 +0200
+
+apturl (0.3.6ubuntu1) karmic; urgency=low
+
+  * AptUrl/AptUrl.py, AptUrl/UI.py, AptUrl/gtk/GtkUI.py:
+    - show channel info when enabling channels
+  * debian/control:
+    - recommend python-gthtml2 (for the channel info UI)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 18 May 2009 16:20:02 +0200
+
+apturl (0.3.5ubuntu1) karmic; urgency=low
+
+  * AptUrl/AptUrl.py:
+    - when enabling sections, do not skip that if the requested
+      package is already known to the package cache
+  * AptUrl/Parser.py:
+    - support proper url synatax with "&" (thanks to asac)
+  * AptUrl/AptUrl.py:
+    - reopen the cache properly after a refresh=yes 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 23 Apr 2009 10:18:08 +0200
+
+apturl (0.3.3ubuntu1) jaunty; urgency=low
+
+  * AptUrl/AptUrl.py:
+    - fix crash on "refresh=yes" (LP: #327075)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 07 Apr 2009 14:35:34 +0200
+
+apturl (0.3.2ubuntu2) jaunty; urgency=low
+
+  * AptUrl/gtk/GtkUI.py:
+    - fix gettext domain (LP: #304950)
+  * data/apturl.glade:
+    - fix missing translatable property (LP: #304925)
+  Thanks to Gabor Kelemen
+  * AptUrl/Helpers.py:
+    - fix crash for packages with no long description
+      (LP: #288576)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 08 Jan 2009 20:17:36 +0100
+
+apturl (0.3.1ubuntu1) jaunty; urgency=low
+
+  * AptUrl/AptUrl.py:
+    - add additional sanitizing into the channel code
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 07 Nov 2008 10:21:59 +0100
+
+apturl (0.3.0ubuntu1) jaunty; urgency=low
+
+  * add README
+  * add basic string substituion for the variables
+    "$kernel" (uname -r) and "$distro" (lsb_release -s)
+    this allows stuff like:
+    "apt:linux-backports-module-$kernel"
+  * add new field "channel" that looks into 
+    /usr/share/app-install/channels for known repositories that
+    the user might want to add
+  * refactored the UI code so that its easy to add a Qt
+    frontend, see AptUrl/UI.py and AptUrl/gtk/GtkUI.py
+    (volunteers welcome :)
+  * improved whitelist checking
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 06 Nov 2008 16:04:46 +0100
+
+apturl (0.2.7ubuntu1) intrepid; urgency=low
+
+  [ Siegfried-Angel Gevatter Pujals ]
+  * apturl:
+     - Show a different error message if the requested package is virtual; this
+       is the first step to fix Launchpad bug #230760.
+     - Show an error dialog if the /etc/apt/sources.list is invalid instead of
+       just crashing (LP: #206640).
+     - Catch KeyboardInterrupt's so that they don't show a traceback.
+     - Add a new exit code (RESULT_BADARGS, 4) for when the problem is with
+       the arguments with which apturl was called.
+     - Only ask once when enabling new components, and only list those
+       which aren't already enabled.
+     - Fix a crash which happened after enabling the requested component(s).
+     - Don't show an error message if the user didn't want to enable a
+       component; just silently skip the package.
+     - Improve the description:
+        + Don't show the summary twice.
+        + Remove single line breaks, like packages.ubuntu.com does.
+        + Parse the Homepage field out of the description.
+     - Do not ask if you want to keep a software channel if it wasn't added.
+     - Use a constant to determine wheter new software channels can be added
+       or not (disabled by default, but that's better than having the code
+       commented out).
+  * AptUrl/Helpers.py:
+     - Add it.
+  * data/apturl.glade:
+     - Add a missing "can_default" property to fix an assertion error.
+     - Change the labels of the buttons on the installation confirmation dialog
+       so that they conform to the HIG. Thanks to Bruce Cowan (LP: #140472).
+     - Make the description field bigger and more visually appealing.
+  * AptUrl/Parser.py:
+     - Raise an Exception if one of the given package names contains characters
+       which are not allowed by the Debian Policy.
+     - Raise an Exception if one of the ?... values contains a space.
+  * apturl.8:
+     - Document all possible exit codes.
+     - Add a new example, and improve the comment of an existing one.
+     - Change the URL in "Bugs" from /apturl to /ubuntu/+source/apturl, as
+       that's where most bugs are.
+  * debian/control:
+     - Add Vcs-Browser field.
+     - Write all dependendency and build dependencies each on a line.
+     - Add python-gobject to the build dependencies (needed for the timer).
+  * debian/rules:
+     - Fix the clean rule so that it removes build/ and AptUrl/Version.py.
+     - Move the stuff from binary-arch to binary-indep, and remove the
+       binary-indep target to please lintian.
+  * debian/copyright:
+     - Update copyright years and author names.
+
+  [ Артём Попов ]
+  * data/apturl.protocol, setup.py:
+     - Register apturl in KDE as a protocol (LP: #227622).
+
+ -- Siegfried-Angel Gevatter Pujals <rainct@ubuntu.com>  Mon, 01 Sep 2008 16:44:35 +0200
+
+apturl (0.2.6ubuntu1) intrepid; urgency=low
+
+  * apturl:
+    - add new ?refresh=1 option that allows forcing a apt-get update
+      before the package gets installed (thanks to Vadim Peretokin, 
+      LP: #258173)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 15 Aug 2008 17:13:14 +0200
+
+apturl (0.2.5ubuntu1) intrepid; urgency=low
+
+  * apturl:
+     - Hide python-apt's "API not stable yet" warning.
+     - If a package is already installed, show an informational box, not
+       an error message (LP: #237012).
+     - Give error dialogs the same icon as question dialogs have.
+  * apturl.8, debian/rules:
+     - Add a manpage (LP: #159422).
+  * debian/control:
+     - Bump the minimum debhelper version to 5.0.51~, as required for dh_icons.
+     - Improve the description.
+  * debian/copyright:
+     - Include the full GPL header.
+
+ -- Siegfried-Angel Gevatter Pujals (RainCT) <rainct@ubuntu.com>  Sat, 14 Jun 2008 15:37:27 +0200
+
+apturl (0.2.4ubuntu1) intrepid; urgency=low
+
+  * make dialog less greedy to not cover up Synaptic (LP: #252028)
+
+ -- Jacob Peddicord <jpeddicord@ubuntu.com>  Fri, 25 Jul 2008 22:23:25 -0400
+
+apturl (0.2.3ubuntu1) intrepid; urgency=low
+
+  * set always on top to prevent window from being hidden (LP: #234992)
+
+ -- Jacob Peddicord <jpeddicord@ubuntu.com>  Mon, 26 May 2008 10:45:16 -0400
+
+apturl (0.2.2ubuntu1) hardy; urgency=low
+
+  * apturl:
+    - only add/ask about component enabling if the 
+      component is actually not yet available (#163049)
+    - return correct error code when enabling
+      a component failed/got cancelt
+    - fix missing destroy in question() helper
+    - ensure that component is fully availabe (LP: #208722)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 15 Apr 2008 15:45:00 +0200
+
+apturl (0.2.1ubuntu1) hardy; urgency=low
+
+  [ Michael Vogt ]
+  * apturl:
+    - fix broken enable of components 
+  * debian/control:
+    - add missing python-apt dependency
+
+  [ Fabien Tassin ]
+  * setup.py:
+    - add support for firefox-3.0 (LP: #207281)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 10 Apr 2008 16:36:48 +0200
+
+apturl (0.2.0ubuntu1) hardy; urgency=low
+
+  * apturl:
+    - run gtk.init_check() (LP: #197062)
+    - make the description better (split into summary/long descr)
+    - fix filename creation (LP: #138315)
+    - typo (LP: #200504)
+    - return proper exit codes on success/cancel/failure (LP: #132276)
+    - only run if the apt cache is not broken
+  * data/apturl.glade:
+    - default button is 'no'
+    - make it resizable 
+  * po/POTFILES.in:
+    - add missing files (LP: #173846)
+  * date/apturl.schemas.in, setup.py:
+    - register apturl in gnome as a protocol
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Tue, 11 Mar 2008 10:15:57 +0100
+
+apturl (0.1.2ubuntu1) hardy; urgency=low
+
+  * support --http-proxy for better integration with the 
+    proxy settings of firefox (LP: #162609)
+  * merged patch from Andy Owen to display a description
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 16 Jan 2008 14:51:24 +0100
+
+apturl (0.1.1ubuntu1) hardy; urgency=low
+
+  * AptUrl/Parser.py:
+    - Implemented multipackage installation (LP: #154593)
+  * tests/apturlparse.py:
+    - add test for the new multipackage feature
+
+ -- Sasa Bodiroza <jazzva@gmail.com>  Sat, 27 Oct 2007 13:42:45 +0200
+
+apturl (0.1ubuntu2) gutsy-proposed; urgency=low
+
+  * support --http-proxy for better integration with the
+    proxy settings of firefox (LP: #162609)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 14 Nov 2007 16:44:14 +0100
+
+apturl (0.1ubuntu1) gutsy; urgency=low
+
+  * debian/control:
+    - fix typo in description (LP: #131828)
+    - add missing synaptic dependency (LP: #132067)
+  * apturl:
+    - check for already installed or unavailable packages
+      earlier (LP: #137053, LP: #137055)
+    - fix incorrect reference to GDebi (LP: #137065)
+    - disable adding repositories for now (LP: #139227)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 05 Oct 2007 16:28:24 +0200
+
+apturl (0.0+bzr20070816) gutsy; urgency=low
+
+  * added i18n support
+  * added support for "minver"
+  * added support to add repositories and sections
+  * added suppor for removing sources again
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 16 Aug 2007 18:03:48 +0200
+
+apturl (0.0+bzr20070709) gutsy; urgency=low
+
+  * properly integrate with firefox
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon,  9 Jul 2007 11:53:32 +0200
+
+apturl (0.0+bzr20070702) gutsy; urgency=low
+
+  * Initial Release.
+  * Implements subset of https://wiki.ubuntu.com/AptFirefoxFileHandler
+    (to unblock firefox-distro-addon-support spec)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 02 Jul 2007 12:49:37 +0200
+
