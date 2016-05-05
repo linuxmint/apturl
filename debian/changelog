@@ -1,3 +1,12 @@
+apturl (0.5.2+linuxmint1) sarah; urgency=medium
+
+  * Removed QT interface
+  * Remove backends (will be reimplemented without dependencies on Ubuntu components)
+  * Specify Gtk version in gi
+  * Implemented synaptics installations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 05 May 2016 16:32:05 +0100
+
 apturl (0.5.2ubuntu11) xenial; urgency=medium
 
   * Drop webkit1 support, we're switching to pure webkit2 now
