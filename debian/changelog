@@ -1,3 +1,9 @@
+apturl (0.5.2+linuxmint2) sarah; urgency=medium
+
+  * Remove channel/section support and dependencies on Ubuntu components and webkit
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 05 May 2016 16:54:28 +0100
+
 apturl (0.5.2+linuxmint1) sarah; urgency=medium
 
   * Removed QT interface
