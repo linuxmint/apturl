@@ -1,3 +1,10 @@
+apturl (0.5.2+linuxmint4) serena; urgency=medium
+
+  [ gogogogi ]
+  * Fix po.hr
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 06 Nov 2016 13:24:57 +0000
+
 apturl (0.5.2+linuxmint3) sarah; urgency=medium
 
   * Updated translations
