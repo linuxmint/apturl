@@ -1,3 +1,16 @@
-#!/bin/sh
+#!/usr/bin/python3
 
-apturl-gtk $@
+import os
+import subprocess
+import sys
+
+def get_output_uni(*args):  # uni = Unicode 
+  return subprocess.check_output(*args, universal_newlines=True).rstrip()
+# We set "universal_newlines" in order to handle Unicode properly.  
+
+launcher = get_output_uni("/usr/lib/linuxmint/common/mint-which-launcher.py")
+target = "apturl-gtk"
+params = " ".join(sys.argv[1:])
+
+command_string = "{0} {1} {2}".format(launcher, target, params)
+os.system(command_string)
