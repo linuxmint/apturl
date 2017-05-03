@@ -6,7 +6,6 @@ Build-Depends: debhelper (>= 9),
  intltool,
  python3-dev,
  python3-distutils-extra,
- python3-aptdaemon
 X-Python3-Version: >= 3.2
 Standards-Version: 3.9.3
 
@@ -33,8 +32,6 @@ Depends: ${python3:Depends},
  ${misc:Depends},
  apturl-common (= ${binary:Version}),
  python3-gi,
- python3-aptdaemon,
- python3-aptdaemon.gtk3widgets,
  gir1.2-gtk-3.0
 Description: install packages using the apt protocol - GTK+ frontend
  AptUrl is a simple graphical application that takes an URL (which follows the
