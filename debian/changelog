@@ -1,3 +1,10 @@
+apturl (0.5.2+linuxmint5) sylvia; urgency=medium
+
+  [ monsta ]
+  * drop aptdaemon deps - not needed anymore (#2)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 04 Nov 2017 13:58:08 +0000
+
 apturl (0.5.2+linuxmint4) serena; urgency=medium
 
   [ gogogogi ]
