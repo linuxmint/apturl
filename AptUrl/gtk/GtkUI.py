@@ -1,8 +1,10 @@
 import gi
 gi.require_version('Gtk', '3.0')
+gi.require_version('XApp', '1.0')
 from gi.repository import Gtk
 from gi.repository import Gdk
 from gi.repository import GObject
+from gi.repository import XApp
 GObject.threads_init()
 
 import os
@@ -47,7 +49,7 @@ class GtkUI(AbstractUI):
                               buttons=buttons)
         d.set_title("")
         d.set_markup("<big><b>%s</b></big>\n\n%s" % (summary, msg))
-        d.set_icon(Gtk.IconTheme.get_default().load_icon('package-x-generic', 16, False))
+        XApp.set_window_icon_name(d, "package-x-generic")
         d.set_keep_above(True)
         d.realize()
         d.get_window().set_functions(Gdk.WMFunction.MOVE)
@@ -92,7 +94,7 @@ class GtkUI(AbstractUI):
         desc = "%s\n\n%s" % (summary, Helpers.format_description(description))
         tbuf.set_text(desc)
         description_text_view.set_buffer(tbuf)
-        dia.set_icon(Gtk.IconTheme.get_default().load_icon('package-x-generic', 16, False))
+        XApp.set_window_icon_name(dia, "package-x-generic")
 
         # check if another package manager is already running
         # FIXME: just checking for the existance of the file is

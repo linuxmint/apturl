@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-05 18:44+0100\n"
+"POT-Creation-Date: 2018-05-30 11:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,21 +98,21 @@ msgstr ""
 msgid "Package '%s' requests minimal version '%s', but only '%s' is available"
 msgstr ""
 
-#: ../AptUrl/gtk/GtkUI.py:83
+#: ../AptUrl/gtk/GtkUI.py:85
 msgid "Install additional software?"
 msgstr ""
 
-#: ../AptUrl/gtk/GtkUI.py:84
+#: ../AptUrl/gtk/GtkUI.py:86
 #, python-format
 msgid "Do you want to install package '%s'?"
 msgstr ""
 
 #: ../data/apturl-gtk.ui.h:1
-msgid "Description"
+msgid "_Install"
 msgstr ""
 
 #: ../data/apturl-gtk.ui.h:2
-msgid "_Install"
+msgid "Description"
 msgstr ""
 
 #: ../data/apturl.schemas.in.h:1
