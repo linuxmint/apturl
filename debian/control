@@ -32,8 +32,8 @@ Depends: ${python3:Depends},
  ${misc:Depends},
  apturl-common (= ${binary:Version}),
  python3-gi,
- python3-xapp,
- gir1.2-gtk-3.0
+ gir1.2-gtk-3.0,
+ gir1.2-xapp-1.0
 Description: install packages using the apt protocol - GTK+ frontend
  AptUrl is a simple graphical application that takes an URL (which follows the
  apt-protocol) as a command line option, parses it and carries out the
