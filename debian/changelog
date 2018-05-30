@@ -1,3 +1,10 @@
+apturl (0.5.2+linuxmint7) tara; urgency=medium
+
+  * Fix xapp dependency
+  * Set dialog title
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 30 May 2018 13:35:20 +0100
+
 apturl (0.5.2+linuxmint6) tara; urgency=medium
 
   * UI: don't skip taskbar, set icon properly
