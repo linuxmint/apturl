@@ -84,7 +84,7 @@ class GtkUI(AbstractUI):
         dia_xml = self.dia_xml
         header = _("Install additional software?")
         body = _("Do you want to install package '%s'?") % package
-        dia.set_title('')
+        dia.set_title(package)
         header_label = dia_xml.get_object('header_label')
         header_label.set_markup("<b><big>%s</big></b>" % header)
         body_label = dia_xml.get_object('body_label')
