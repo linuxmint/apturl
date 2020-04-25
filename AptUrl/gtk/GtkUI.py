@@ -17,6 +17,8 @@ from AptUrl.UI import AbstractUI
 from AptUrl import Helpers
 from AptUrl.Helpers import _
 
+import mintcommon.aptdaemon
+
 APTURL_UI_FILE = os.environ.get(
     # Set this envar to use a test .ui file.
     'APTURL_UI_FILE',
@@ -119,39 +121,35 @@ class GtkUI(AbstractUI):
     # progress etc
     def doUpdate(self):
         self.require_update = True
-        win = self.dia.get_window()
-        try:
-            xid = win.get_xid()
-        except Exception as e:
-            print(e)
-            xid = 0
-        FNULL = open(os.devnull, 'w')
-        cmd = ["sudo", "/usr/bin/mint-refresh-cache", "--use-synaptic", "%d" % xid]
-        comnd = subprocess.Popen(' '.join(cmd), stdout=FNULL, stderr=subprocess.STDOUT, shell=True)
-        returnCode = comnd.wait()
 
     def doInstall(self, apturl):
         self.dia.hide()
-        win = self.dia.get_window()
-        try:
-            xid = win.get_xid()
-        except Exception as e:
-            print(e)
-            xid = 0
+        packages = []
+        packages.append(apturl.package)
+        self.install_packages(packages)
 
-        cmd = ["pkexec", "/usr/sbin/synaptic", "--hide-main-window",  "--non-interactive", "--parent-window-id", "%s" % xid]
-        cmd.append("-o")
-        cmd.append("Synaptic::closeZvt=true")
-        f = tempfile.NamedTemporaryFile()
-        for pkg in [apturl.package]:
-            pkg_line = "%s\tinstall\n" % pkg
-            f.write(pkg_line.encode("utf-8"))
-        cmd.append("--set-selections-file")
-        cmd.append("%s" % f.name)
-        f.flush()
-        comnd = subprocess.Popen(' '.join(cmd), shell=True)
-        returnCode = comnd.wait()
-        f.close()
+    def install_packages(self, package_names):
+        self.apt = mintcommon.aptdaemon.APT(None)
+        self.package_names = package_names
+        self.busy = True
+        if self.require_update:
+            self.apt.set_finished_callback(self.on_update_before_install_finished)
+            self.apt.update_cache()
+        else:
+            self.on_update_before_install_finished()
+        while self.busy:
+            while Gtk.events_pending():
+                Gtk.main_iteration()
+
+    def on_update_before_install_finished(self, transaction=None, exit_state=None):
+        self.apt.set_finished_callback(self.on_install_finished)
+        self.apt.set_cancelled_callback(self.on_install_finished)
+        self.apt.install_packages(self.package_names)
+
+    def on_install_finished(self, transaction=None, exit_state=None):
+        del self.package_names
+        del self.apt
+        self.busy = False
         self.dia.exit()
 
 if __name__ == "__main__":
