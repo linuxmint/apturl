@@ -1,3 +1,9 @@
+apturl (0.5.2+linuxmint8) ulyana; urgency=medium
+
+  * Fix refreshing cache
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 25 Apr 2020 11:19:29 +0100
+
 apturl (0.5.2+linuxmint7) tara; urgency=medium
 
   * Fix xapp dependency
