@@ -126,7 +126,7 @@ class GtkUI(AbstractUI):
             print(e)
             xid = 0
         FNULL = open(os.devnull, 'w')
-        cmd = ["sudo", "/usr/lib/linuxmint/mintUpdate/checkAPT.py", "--use-synaptic", "%d" % xid]
+        cmd = ["sudo", "/usr/bin/mint-refresh-cache", "--use-synaptic", "%d" % xid]
         comnd = subprocess.Popen(' '.join(cmd), stdout=FNULL, stderr=subprocess.STDOUT, shell=True)
         returnCode = comnd.wait()
 
