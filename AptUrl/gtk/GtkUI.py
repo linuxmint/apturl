@@ -122,10 +122,11 @@ class GtkUI(AbstractUI):
     def doUpdate(self):
         self.require_update = True
 
-    def doInstall(self, apturl):
+    def doInstall(self, apturl, extra_pkg_names=[]):
         self.dia.hide()
         packages = []
         packages.append(apturl.package)
+        packages += extra_pkg_names
         self.install_packages(packages)
 
     def install_packages(self, package_names):
