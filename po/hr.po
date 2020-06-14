@@ -2,20 +2,24 @@
 # Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
 # This file is distributed under the same license as the apturl package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# gogo <trebelnik2@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: apturl\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-16 12:06+0000\n"
-"PO-Revision-Date: 2011-10-02 10:02+0000\n"
-"Last-Translator: Saša Teković <Unknown>\n"
-"Language-Team: Croatian <hr@li.org>\n"
+"PO-Revision-Date: 2020-06-14 11:41+0200\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"Language-Team: Croatian <Hrvatski>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Generator: Gtranslator 3.36.0\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: ../apturl-gtk:49 ../apturl-kde:52
 msgid "User requested interrupt."
@@ -27,7 +31,7 @@ msgstr "Nedopušteni znak u uri-ju"
 
 #: ../AptUrl/Parser.py:93
 msgid "Whitespace in key=value"
-msgstr "Prazni znakovi u ključ=vrijednost"
+msgstr "Prazni znakovi u key=vrijednost"
 
 #: ../AptUrl/Parser.py:99
 #, python-format
@@ -119,10 +123,8 @@ msgstr "Nije moguće instalirati '%s' (%s) "
 
 #: ../AptUrl/AptUrl.py:235
 #, python-format
-msgid ""
-"Package '%s' requests minimal version '%s', but only '%s' is available"
-msgstr ""
-"Paket '%s' zahtijeva najmanje inačicu '%s', no dostupna je samo '%s'"
+msgid "Package '%s' requests minimal version '%s', but only '%s' is available"
+msgstr "Paket '%s' zahtijeva najmanje inačicu '%s', no dostupna je samo '%s'"
 
 #: ../AptUrl/UI.py:16
 msgid "Enable additional components"
@@ -135,11 +137,11 @@ msgstr "Omogući dodatni kanal softvera"
 #: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
 #, python-format
 msgid "Do you want to enable the following software channel: '%s'?"
-msgstr "Želite li uključiti sljedeći kanal softvera: '%s'?"
+msgstr "Želite li omogućiti sljedeći kanal softvera: '%s'?"
 
 #: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
 msgid "Install additional software?"
-msgstr "Instalirati dodatni softver?"
+msgstr "Instaliraj dodatni softver?"
 
 #: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
 #, python-format
@@ -157,15 +159,15 @@ msgstr "_Instaliraj"
 
 #: ../data/apturl.schemas.in.h:1
 msgid "Whether the specified command should handle \"apt\" URLs"
-msgstr "Treba li navedena naredba upravljati \"apt\" URL-ovima"
+msgstr "Treba li navedena naredba rukovati \"apt\" URL-ovima"
 
 #: ../data/apturl.schemas.in.h:2
 msgid ""
 "True if the command specified in the \"command\" key should handle \"apt\" "
 "URLs."
 msgstr ""
-"Istina ako bi naredba određena u ključu \"naredba\" trebala upravljati "
-"\"apt\" URL-ovima."
+"Istina ako bi naredba određena u ključu \"naredba\" trebala rukovati \"apt\" "
+"URL-ovima."
 
 #: ../data/apturl.schemas.in.h:3
 msgid "The handler for \"apt\" URLs"
@@ -174,7 +176,7 @@ msgstr "Rukovatelj \"apt\" URL-ova"
 #: ../data/apturl.schemas.in.h:4
 msgid "The command used to handle \"apt\" URLs, if enabled."
 msgstr ""
-"Ako je omogućeno, naredba koja se koristi za upravljanje \"apt\" URL-ovima."
+"Ako je omogućeno, naredba koja se koristi za rukovanje \"apt\" URL-ovima."
 
 #: ../data/apturl.schemas.in.h:5
 msgid "Run the command in a terminal"
