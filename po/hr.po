@@ -2,26 +2,27 @@
 # Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
 # This file is distributed under the same license as the apturl package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Saša Teković <Unknown>, 2011.
 # gogo <trebelnik2@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: apturl\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-16 12:06+0000\n"
-"PO-Revision-Date: 2020-06-14 11:41+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-25 13:51+0100\n"
+"PO-Revision-Date: 2020-06-14 11:47+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <Hrvatski>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2016-05-05 17:36+0000\n"
 "X-Generator: Gtranslator 3.36.0\n"
-"Language: hr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
-#: ../apturl-gtk:49 ../apturl-kde:52
+#: ../apturl-gtk:49
 msgid "User requested interrupt."
 msgstr "Prekid na zahtjev korisnika."
 
@@ -47,35 +48,15 @@ msgstr "URL '%s' je predugačak"
 msgid "No ':' in the uri"
 msgstr "U uri-ju nedostaje ':'"
 
-#: ../AptUrl/AptUrl.py:73
-#, python-format
-msgid "Enabling '%s' failed"
-msgstr "Omogućavanje '%s' nije uspjelo"
-
-#: ../AptUrl/AptUrl.py:91
-#, python-format
-msgid "Unknown channel '%s'"
-msgstr "Nepoznati kanal '%s'"
-
-#: ../AptUrl/AptUrl.py:92
-#, python-format
-msgid "The channel '%s' is not known"
-msgstr "Kanal '%s' nije poznat"
-
-#: ../AptUrl/AptUrl.py:100
-#, python-format
-msgid "Enabling channel '%s' failed"
-msgstr "Omogućavanje kanala '%s' nije uspjelo"
-
-#: ../AptUrl/AptUrl.py:112
+#: ../AptUrl/AptUrl.py:56
 msgid "Invalid /etc/apt/sources.list file"
 msgstr "Neispravna /etc/apt/sources.list datoteka"
 
-#: ../AptUrl/AptUrl.py:115
+#: ../AptUrl/AptUrl.py:59
 msgid "Software index is broken"
 msgstr "Popis softvera je oštećen"
 
-#: ../AptUrl/AptUrl.py:116
+#: ../AptUrl/AptUrl.py:60
 msgid ""
 "This is a major failure of your software management system. Please check for "
 "broken packages with synaptic, check the file permissions and correctness of "
@@ -87,75 +68,61 @@ msgstr ""
 "ispravnost '/etc/apt/sources.list' datoteke, te osvježite informacije o "
 "softveru naredbom: 'sudo apt-get update' i 'sudo apt-get install -f'."
 
-#: ../AptUrl/AptUrl.py:144
+#: ../AptUrl/AptUrl.py:88
 msgid "Need a url to continue, exiting"
 msgstr "Potreban je url za nastavak, izlazak"
 
-#: ../AptUrl/AptUrl.py:147
+#: ../AptUrl/AptUrl.py:91
 #, python-format
 msgid "Invalid url: '%s' given, exiting"
 msgstr "Neispravan url: '%s' je zadan, izlazak"
 
-#: ../AptUrl/AptUrl.py:183
+#: ../AptUrl/AptUrl.py:127
 #, python-format
 msgid "Can not deal with protocol '%s' "
 msgstr "Rukovanje protokolom '%s'  nije moguće "
 
-#: ../AptUrl/AptUrl.py:205
+#: ../AptUrl/AptUrl.py:143
 #, python-format
 msgid "Package '%s' is virtual."
 msgstr "Paket '%s' je virtualan."
 
-#: ../AptUrl/AptUrl.py:208
+#: ../AptUrl/AptUrl.py:146
 #, python-format
 msgid "Could not find package '%s'."
 msgstr "Nije moguće pronaći paket '%s'."
 
-#: ../AptUrl/AptUrl.py:214
+#: ../AptUrl/AptUrl.py:152
 #, python-format
 msgid "Package '%s' is already installed"
 msgstr "Paket '%s' je već instaliran"
 
-#: ../AptUrl/AptUrl.py:229
+#: ../AptUrl/AptUrl.py:167
 #, python-format
 msgid "Can not install '%s' (%s) "
 msgstr "Nije moguće instalirati '%s' (%s) "
 
-#: ../AptUrl/AptUrl.py:235
+#: ../AptUrl/AptUrl.py:173
 #, python-format
 msgid "Package '%s' requests minimal version '%s', but only '%s' is available"
 msgstr "Paket '%s' zahtijeva najmanje inačicu '%s', no dostupna je samo '%s'"
 
-#: ../AptUrl/UI.py:16
-msgid "Enable additional components"
-msgstr "Omogući dodatne komponente"
-
-#: ../AptUrl/UI.py:24 ../AptUrl/gtk/GtkUI.py:93 ../AptUrl/kde/KdeUI.py:80
-msgid "Enable additional software channel"
-msgstr "Omogući dodatni kanal softvera"
-
-#: ../AptUrl/UI.py:25 ../AptUrl/gtk/GtkUI.py:94 ../AptUrl/kde/KdeUI.py:81
-#, python-format
-msgid "Do you want to enable the following software channel: '%s'?"
-msgstr "Želite li omogućiti sljedeći kanal softvera: '%s'?"
-
-#: ../AptUrl/gtk/GtkUI.py:155 ../AptUrl/kde/KdeUI.py:133
+#: ../AptUrl/gtk/GtkUI.py:87
 msgid "Install additional software?"
 msgstr "Instaliraj dodatni softver?"
 
-#: ../AptUrl/gtk/GtkUI.py:156 ../AptUrl/kde/KdeUI.py:134
+#: ../AptUrl/gtk/GtkUI.py:88
 #, python-format
 msgid "Do you want to install package '%s'?"
 msgstr "Želite li instalirati paket '%s'?"
 
-#. kate: space-indent on; indent-width 4; mixedindent off; indent-mode python;
 #: ../data/apturl-gtk.ui.h:1
-msgid "Description"
-msgstr "Opis"
-
-#: ../data/apturl-gtk.ui.h:2
 msgid "_Install"
 msgstr "_Instaliraj"
+
+#: ../data/apturl-gtk.ui.h:2
+msgid "Description"
+msgstr "Opis"
 
 #: ../data/apturl.schemas.in.h:1
 msgid "Whether the specified command should handle \"apt\" URLs"
@@ -189,3 +156,24 @@ msgid ""
 msgstr ""
 "Istina ako bi naredba koja se koristi za rukovanje ovom vrstom URL-a, "
 "trebala biti pokrenuta u terminalu."
+
+#~ msgid "Enabling '%s' failed"
+#~ msgstr "Omogućavanje '%s' nije uspjelo"
+
+#~ msgid "Unknown channel '%s'"
+#~ msgstr "Nepoznati kanal '%s'"
+
+#~ msgid "The channel '%s' is not known"
+#~ msgstr "Kanal '%s' nije poznat"
+
+#~ msgid "Enabling channel '%s' failed"
+#~ msgstr "Omogućavanje kanala '%s' nije uspjelo"
+
+#~ msgid "Enable additional components"
+#~ msgstr "Omogući dodatne komponente"
+
+#~ msgid "Enable additional software channel"
+#~ msgstr "Omogući dodatni kanal softvera"
+
+#~ msgid "Do you want to enable the following software channel: '%s'?"
+#~ msgstr "Želite li omogućiti sljedeći kanal softvera: '%s'?"
