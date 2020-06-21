@@ -176,8 +176,15 @@ class AptUrlController(object):
                                                      verStr))
                     continue
 
+            changes = self.cache.get_changes()
+            additional_pkgs = []
+
+            for pkg in changes:
+                if pkg.marked_install:
+                    additional_pkgs.append(pkg.name)
+
             # install it
-            ui.doInstall(apturl)
+            ui.doInstall(apturl, extra_pkg_names=additional_pkgs)
 
             if not self.verifyInstall(apturl):
                 ret = RESULT_ERROR

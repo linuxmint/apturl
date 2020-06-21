@@ -16,7 +16,7 @@ class AbstractUI(object):
     # install/update progress 
     def doUpdate(self):
         pass
-    def doInstall(self, pkglist):
+    def doInstall(self, apturl, extra_pkg_names=None):
         pass
 
     # UI specific actions for enabling stuff
