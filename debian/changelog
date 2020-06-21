@@ -1,3 +1,13 @@
+apturl (0.5.2+linuxmint10) ulyana; urgency=medium
+
+  [ gogogogi ]
+  * Update hr.po (#5)
+
+  [ Michael Webster ]
+  * Fix dep resolution, improve initial query dialog (#4)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 21 Jun 2020 13:55:38 +0100
+
 apturl (0.5.2+linuxmint9) ulyana; urgency=medium
 
   * Switch from synaptic to mintcommon-aptdaemon backend
