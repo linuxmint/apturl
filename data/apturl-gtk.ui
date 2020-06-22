@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
+<!-- Generated with glade 3.22.1 -->
 <!--*- mode: xml -*-->
 <interface>
   <requires lib="gtk+" version="3.22"/>
@@ -51,6 +51,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
                 <property name="image">dialog-image</property>
+                <property name="use_underline">True</property>
                 <property name="always_show_image">True</property>
               </object>
               <packing>
