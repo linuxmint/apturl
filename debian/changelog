@@ -1,3 +1,9 @@
+apturl (0.5.2+linuxmint11) ulyana; urgency=medium
+
+  * UI: Fix underlined label
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 22 Jun 2020 15:28:53 +0100
+
 apturl (0.5.2+linuxmint10) ulyana; urgency=medium
 
   [ gogogogi ]
