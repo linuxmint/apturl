@@ -15,7 +15,7 @@ Depends: ${python3:Depends},
  ${shlibs:Depends},
  ${misc:Depends},
  python3-apt,
- mintupdate
+ mint-common
 Description: install packages using the apt protocol - common data
  AptUrl is a simple graphical application that takes an URL (which follows the
  apt-protocol) as a command line option, parses it and carries out the
