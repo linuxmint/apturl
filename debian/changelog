@@ -1,3 +1,9 @@
+apturl (0.5.2+linuxmint13) vanessa; urgency=medium
+
+  * bump - rebuild using XZ compression
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 20 Jun 2022 13:36:09 +0200
+
 apturl (0.5.2+linuxmint12) vanessa; urgency=medium
 
   * Depend on mint-common
